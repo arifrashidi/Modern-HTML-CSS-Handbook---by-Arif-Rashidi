@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_intro</title>
+    <link rel="stylesheet" href="css-intro.css">
+</head>
+<body>
+
+<!--? Combinator CSS selector -->
+    <!-- Descendant Selector (space) -->
+    <div class="test_1">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            <p>Paragraph 3 in the div (inside a section element).</p>
+        </section>
+    </div>
+    <p>Paragraph 4. Not in a div.</p>
+    <hr>
+    
+    <!-- Child Selector (>) -->
+    <div class="test_2">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+            <p>Paragraph 3 in the div (inside a section element).</p>
+        </section>
+    </div>
+    <p>Paragraph 4. Not in a div.</p>
+    <hr>
+
+<!--? Pseudo-classes -->
+    <!-- Pseudo-classes ( :hover ) -->
+    <button class="button_test_1">Hover me!</button>
+    <hr>
+
+    <!-- Pseudo-classes ( :hover ) -->
+    <div class="container_2">Hover over this div element to show the p element
+        <p>Tada! Here I am!</p>
+    </div>
+    <hr>
+
+    <!-- Pseudo-classes ( :target ) -->
+    <div class="container_3">
+        <a href="#section_1">Section 1</a>
+        <div id="section_1">
+            <p>Hello World!</p>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Pseudo-classes ( :focus ) -->
+    <form class="form_1">
+        First name: <input type="text" name="firstname"><br>
+        Last name: <input type="text" name="lastname">
+    </form>
+    <hr>
+
+    <!-- Pseudo-classes ( :focus-within ) -->
+    <form class="form_1_1">
+        First name: <input type="text" name="firstname"><br>
+        Last name: <input type="text" name="lastname">
+    </form>
+    <hr>
+
+    <!-- Pseudo-classes ( :first-child ) -->
+    <div class="container_4">
+        <p>This paragraph is the FIRST child of its parent (div).</p>
+        <p>This paragraph is second child of its parent (div).</p>
+        <p>This paragraph is third child of its parent (div).</p>
+    </div>
+    <hr>
+
+        <!-- Pseudo-classes ( :is ) -->
+    <div class="container_4_1">
+        <h1>My name is Arif</h1>
+        <h2>My name is Arif</h2>
+        <h3>My name is Arif</h3>
+    </div>
+    <hr>
+
+    <!--? Pseudo-elements -->
+    <!-- Pseudo-element ( ::first-letter ) -->
+    <div class="container_5">
+        <h1>My bio</h1>
+        <p>My name is Arif.</p>
+        <p>I live in Malaysia.</p>
+    </div>
+    <hr>
+
+    <!-- Pseudo-element ( ::first-letter ) -->
+    <div class="container_6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ducimus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, ducimus.</p>
+    </div>
+    <hr>
+
+    <!-- Pseudo-element ( ::placeholder ) -->
+    <form class="form_2">
+        <label>Insert your phone number</label>
+        <input type="tel" placeholder="01349542646" required maxlength="11">
+        <br>
+        <label>Insert your email</label>
+        <input type="email" placeholder="daniel@gmail.com" required>
+        <br>
+        <input type="submit" value="SUBMIT">
+    </form>
+    <hr>
+
+    <!-- Pseudo-element ( ::before ) -->
+    <form class="form_3">
+        <label for="username">Username:</label>
+        <input type="text" id="username">
+    </form>
+    <hr>
+
+    <!-- Pseudo-element ( ::after ) -->
+    <a class="link_1" href="#" class="link">Click me</a>
+    <hr>
+
+    <!--? CSS Math Functions -->
+    <!-- Pseudo-element ( ::first-letter ) -->
+    <div class="container_7">
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+    </div>
+
+</body>
+</html>
+

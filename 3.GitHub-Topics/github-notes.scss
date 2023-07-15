@@ -1,0 +1,213 @@
+
+//* --------------------------------------------------------------------------
+// 📁 Github Notes
+//* --------------------------------------------------------------------------
+
+// • 🧡: Main topic 
+// • 📝: Notes 
+// • 🔸: Subtopics 
+// • 🔗: Sub-subtopics  
+
+//* --------------------------------------------------------------------------
+// 🧡 Git & GitHub intro 
+// 📝 Git and GitHub provide a powerful combination for web development, ...
+// enabling efficient version control, seamless collaboration, ...
+// and effective project management. 
+
+// -----------------
+// 🔸 What is Git: 
+// 📝 Git is an actual version control software, it was orinally meant to run on command line.
+// 📝 It that allows developers to track changes, manage code revisions, and collaborate with others.
+// 📝 In web development, Git helps you:
+
+//? 🔗 1. Version Control:
+// 📝 It allows you to track changes to your codebase, creating a timeline 
+// of commits that represent different versions of your project. 
+// 📝 You can easily revert to previous versions, compare changes, 
+// and identify who made specific modifications.
+
+//? 🔗 2. Collaboration:
+// 📝 Git allows multiple developers to work on the same project simultaneously 
+// without overwriting each other's work.
+// 📝 Each developer can have their own local copy of the repository, 
+// make changes, and then merge those changes together.
+
+//? 🔗 3. Branching & Merging:
+// 📝 It enables you to create branches, which are independent lines of development. 
+// 📝 This is particularly useful in web development when working on new features or bug fixes. ...
+// You can create a branch, work on your changes without affecting the main codebase, ...
+// and merge the changes back into the main branch when ready.
+
+// -----------------
+// 🔸 What is GitHub: 
+// 📝 GitHub is a web-based hosting platform built around Git.
+// 📝 It is a website where you can host you git repositories, collaborate with other user,
+// and discover other open source repositories.
+// 📝 In web development, GitHub offers the following benefits:
+
+//? 🔗 1. Remote Repository:
+// 📝 GitHub allows you to store your Git repositories on remote servers, ...
+// making them accessible from anywhere with an internet connection.
+
+//? 🔗 2. Collaboration & Pull Requests:
+// 📝 GitHub provides a platform for teams to collaborate on code. 
+// 📝 Developers can clone repositories, make changes locally, and submit ...
+// pull requests to propose changes to the project. 
+
+//? 🔗 3. Issue Tracking & Project Management:
+// 📝 GitHub includes tools to help manage tasks, track bugs, and plan project milestones, 
+// enhancing project organization and coordination.
+
+//? 🔗 4. Continuous Integration & Deployment (CI/CD):
+// 📝 GitHub integrates with various CI/CD tools, allowing you to automate processes 
+// such as building, testing, and deploying your web applications. 
+// 📝 This enables faster development cycles and smoother deployment workflows.
+
+//* --------------------------------------------------------------------------
+// 🧡 GitHub local repositories & remote repositories 
+// 📝 GitHub local repositories and remote repositories are two interconnected ...
+// components in the Git and GitHub workflow.
+
+// -----------------
+// 🔸 What is local repositories (offline): 
+// 📝 A local repository refers to the copy of a repository that exists on your local machine.
+// 📝 When you clone a repository from GitHub to your local machine, you create a local repository. 
+// 📝 It contains the entire project's files, commit history, branches, and tags.
+
+// -----------------
+// 🔸 What is remote repositories (online): 
+// 📝 Remote repositories, on the other hand, are stored on remote servers, such as GitHub.com. 
+// 📝 When you create a repository on GitHub or push your local commits to GitHub, ...
+// you create a remote repository.
+
+//* --------------------------------------------------------------------------
+// 🧡 GitHub Desktop 
+// 📝 GitHub Desktop is a user-friendly application that provides a graphical interface ...
+// for working with Git and GitHub repositories on your computer.
+// 📝 For beginner, Github Desktop is more easier to use than using ...
+// the command line to run Git commands.
+
+// -----------------
+// 🔸 Create a new repository: 
+// 📝 Creating a new repository refers to the process of setting up a ...
+// new project on the GitHub platform.
+// 📝 Keep in mind that you can open integrated terminal first and insert 'git init' ...
+// on the command line to create new repository manually.
+
+//? 🔗 Things to consider when create a new repository:
+
+//+ Main Branch: 
+// 📝 The "main" branch (previously referred to as "master") 
+// is typically the primary branch of a Git repository. 
+// 📝 It represents the stable version of your codebase and is
+//  commonly used as the default branch for your project.
+
+//+ Initialize with a README file (optional): 
+// 📝 This file serves as a starting point for your project and ...
+// provides basic information about your repository. 
+// 📝 Usually the box is checked to included a README file.
+
+//+ Git ignore (optional): 
+// 📝 Automatically exclude certain files or directories from version control.
+// 📝 Usually set to "none".
+
+//+ License (optional): 
+// 📝 Add a license to your repository.
+// 📝 Usually set to "none".
+
+// -----------------
+// 🔸 Add local repository: 
+// 📝 Adding a local repository in GitHub refers to the process of connecting and synchronizing ...
+// a Git repository that exists on your local machine with a remote repository hosted on GitHub. 
+// 📝 If you want to add new repository to the existing file, you need to open integrated ...
+// terminal first and insert 'git init' on the command line to create new repository manually.
+
+// -----------------
+// 🔸 Cloning repository: 
+// 📝 Cloning a repository in GitHub refers to the process of creating a local copy 
+// of a remote repository hosted on GitHub. 
+// 📝 When you clone a repository, you download all of its files, commit history, ...
+// and branches to your local machine. 
+
+//* --------------------------------------------------------------------------
+// 🧡 The next step after creating a local repository 
+// 📝 Once you've create a new repository, you can create commit changes, 
+// push changes to remote repository and collaborate with others.
+
+// -----------------
+// 🔸 Commit changes to local repository:
+// 📝 In Git, a commit is a record of changes made to your code. 
+// 📝 When you make modifications to your files in a repository, 
+// you can create a commit to capture those changes.
+
+//? 🔗 How to commit changes using Github Desktop:
+// 1️⃣ Select the repository where you want to commit changes.
+// 2️⃣ Review the list of changed files in the "Changes" tab.
+// 3️⃣ Stage the changes you want to include in the commit by ...
+// checking the boxes next to the files or clicking the "Stage All" button.
+// 4️⃣  Enter a commit message in the "Summary" field. (required)
+// 📝 5. Provide a more detailed description in the "Description" field. (optional)
+
+//? 🔗 How to commit changes using source control in VSCode:
+// 1️⃣ Open the Source Control view (Source Control icon in the left sidebar).
+// 2️⃣ In the Source Control view, you'll see a list of modified files.
+// 3️⃣ Stage changes by clicking the "+" icon next to each file or 
+// using the checkboxes to select desired changes.
+// 4️⃣ Enter a commit message in the text input box at the top ...
+// of the Source Control view. (required)
+
+// -----------------
+// 🔸 Exclude certain files from being committed to the repository:
+// 📝 ".gitignore" file is used to specify which files should be ignored by Git ...
+// when tracking changes in a repository.
+// 📝 It is a plain text file named .gitignore that is typically placed at the ...
+// root directory of a Git repository. 
+// 📝 It ensures that these ignored files do not clutter the repository.
+
+//? 🔗 How to add ".gitignore" file using Github Desktop:
+// 1️⃣ Click on the "Changes" tab.
+// 2️⃣ Right-click on the file you want to ignore and select "ignore file".
+// 3️⃣ You can specify the files and directories you want to ignore using patterns.
+// -----------------
+// 🔸 Publish / push your local repository to a remote repository(origin):
+
+//? 🔗 Publish / push repository using Github Desktop:
+// 📝 Click the "Publish repository" / "Push origin" button at the top panel.
+
+//? 🔗 Push repository using source control in VSCode:
+// 📝 If you have a remote repository and want to synchronize your local commits 
+// with the remote repository, click the "sync changes" at the top panel.
+
+// -----------------
+// 🔸 Revert changes in commit:
+// 📝 In GitHub, "revert" refers to the action of undoing the changes made in a specific commit. 
+// 📝 Reverting a commit creates a new commit that effectively undoes the changes ...
+// introduced by the original commit.
+
+//? 🔗 How to revert changes in a commit using Github Desktop:
+// 1️⃣ Click on the "History" tab.
+// 2️⃣ Right-click on the commit you want to revert and ...
+// select "Revert this commit" from the context menu.
+// 3️⃣ Optionally, push the revert commit to the remote repository.
+
+// -----------------
+// 🔸 Create new branches that diverge from the main branch:
+// 📝 Branching in GitHub refers to the process of creating separate lines ...
+// of development within a repository.
+// 📝 It involves creating new branches that diverge from the main branch ...
+// (typically called "master" or "main") to work on different features, ...
+// bug fixes, or versions of a project concurrently.
+// 📝 If you're on a team with multiple developers all working on the same codebase,
+// it would be a good idea to do branches.
+
+//? 🔗 How to create new branches using Github Desktop:
+// 1️⃣ Click on the "Current Branch" button, it displays the current branch you're on.
+// 2️⃣ In the dropdown menu, click on "New Branch" button.
+// 3️⃣ Enter a name for your new branch in the provided text field. 
+
+//? 🔗 How to merge branches using github desktop:
+// 1️⃣ Make sure you are on the branch you want to merge into (typically the main branch).
+// 2️⃣ Click on the "Branch" dropdown menu and select the "Merge into current branch".
+// 3️⃣ Select the branch you want to merge and click "create a merge commit" button.
+
+//* --------------------------------------------------------------------------

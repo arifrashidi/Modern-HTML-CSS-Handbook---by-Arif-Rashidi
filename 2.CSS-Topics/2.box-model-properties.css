@@ -1,0 +1,322 @@
+
+/** -------------------------------------------------------------------------- */
+/* 📁 CHAPTER 3: General Properties */
+/** -------------------------------------------------------------------------- */
+
+/* • 🧡: Main topic  */
+/* • 📝: Notes  */
+/* • 🔸: Subtopics  */
+/* • 🔗: Sub-subtopics   */
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Box Model 
+📝 The CSS box model is a fundamental concept that describes the ...
+layout and sizing of elements in web development. 
+It consists of four main components that define the space occupied by an element:
+
+/* ----------------- */
+/*
++ content
+Refers to the actual content of an element, such as text, images, or other HTML elements.
+It is the innermost part of the box and is typically sized using the width and height properties.
++ padding
+The padding is a transparent area surrounding the content. 
+It provides space between the content and the element's border.
++ Border
+The border is a visible line or edge that surrounds the element's content and padding.
++ Margin
+The margin is the space outside the element, creating a gap between the element and adjacent elements. 
+*/
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Width & Height 
+📝 width & height properties used to define the dimensions of an element, ...
+specifying its width & height respectively.
+📝 They allow you to control the size of various HTML elements such as divs, images, and text boxes. 
+
+/* ----------------- */
+/* 
+🔸 width / height
+📝 Used to set the height and width of an element. */
+
+/*/ padding property values */
+/* 
++ LENGTH
+specifies a margin in px, vw, vh, em, rem.
++ auto
+This is default. The browser calculates the height and width.
++ %
+Specifies a margin in % of the width of the containing element.
++ inherit
+Specifies that the margin values should be inherited from the parent element. 
++ initial
+Apply default state of the property before any styles or modifications are applied. */
+
+/*- 🔗 example 1 */
+.container {
+    width: 100px;
+}
+
+/* ----------------- */
+/* 
+🔸 max-width
+📝 Used to set the maximum width of an element. 
+📝 It restricts the width of the element to a specific value, but allows it to ...
+be narrower if the content inside the element is narrower than the set value. 
+📝 Using max-width will improve the browser's handling of small windows.*/
+
+/*/ max-width property values */
+/* 
++ LENGTH
+specifies a margin in px, vw, vh, em, rem.
++ auto
+This is default. The browser calculates the height and width.
++ %
+Specifies a margin in % of the width of the containing element.
+
+/*- 🔗 example 1 */
+.container {
+    max-width: 300px;
+}
+
+/* ----------------- */
+/* 
+🔸 min-width
+📝 Used to set the minimum width of an element. 
+📝 It ensures that the element's width is never smaller than the specified value. 
+📝 If the content within the element requires more space, the element's width will ...
+expand beyond the minimum width.
+ */
+
+/*/ min-width property values */
+/* 
++ LENGTH
+specifies a margin in px, vw, vh, em, rem.
++ auto
+This is default. The browser calculates the height and width.
++ %
+Specifies a margin in % of the width of the containing element.
+
+/*- 🔗 example 1 */
+.container {
+    min-width: 300px;
+}
+
+/* ----------------- */
+/* 
+🔸 aspect-ratio 
+📝 Used to define the ratio between the width and height of an element. 
+📝 It allows you to maintain a specific aspect ratio for an element, even as its dimensions change.
+*/
+/*syntax: 🔗 aspect-ratio property
+selector {
+    aspect-ratio: <width> / <height>;
+*/
+
+/*- 🔗 example 1 */
+.container {
+    width: 300px;
+    aspect-ratio: 2 / 3;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Padding 
+📝 Padding is used to  to generate space around an element's content, inside of any defined borders.
+
+/* ----------------- */
+/* 
+🔸 padding
+📝 Specifying the padding for all side of an element. */
+
+/*syntax: 🔗 padding property
+selector {
+    paddibg: top, right, bottom, left
+*/
+
+/*/ padding property values */
+/* 
++ LENGTH
+specifies a margin in px, em, rem.
++ %
+Specifies a margin in % of the width of the containing element
++ inherit
+Specifies that the margin values should be inherited from the parent element */
+
+/*- 🔗 example 1 */
+.container {
+    padding: 5px, 10px, 20px, 40px;
+}
+
+/* ----------------- */
+/* 
+🔸 padding-top / padding-right / padding-bottom / padding-left
+📝 Specifying the padding for each side of an element. /*
+*/
+
+/*- 🔗 example 1 */
+.container {
+    padding-top: 2px;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Borders 
+📝 The border properties allow you to specify the style, width, 
+and color of an element's border.
+📝 The recommended unit for specifying all border properties values is in - (px). */
+
+/* ----------------- */
+/* 
+🔸 border-style
+📝 Specifies what kind of border to display. */
+
+/* ----------------- */
+/* 
+🔸 border-width
+📝 Specifies the width of the four borders. */
+
+/*- 🔗 example 1 */
+.container {
+    border-style: dashed;
+    border-width: 2px 4px;
+}
+
+/* ----------------- */
+/* 
+🔸 border-color
+📝 Used to set the color of the four borders. */
+
+/* ----------------- */
+/* 
+🔸 border-color
+📝 Used to set the color of the four borders. */
+
+/* ----------------- */
+/* 
+🔸 border-radius
+📝 Used to add rounded borders to an element: */
+
+/* ----------------- */
+/* 
+?🔸 CSS border - shorthand property
+📝 To shorten the code, it is also possible to specify all the individual border properties in one property.
+📝 The border property is a shorthand property for the following individual border properties:
+
+    1. border-width
+    2. border-style (required)
+    3. border-color */
+
+/*- 🔗 example 1 */
+
+.container {
+    border: 5px solid red;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Margin 
+📝 Margin properties are used to create space around elements, outside of any defined borders.
+
+/* ----------------- */
+/* 
+🔸 margin
+📝 Specifying the margin for all side of an element. */
+
+/*syntax: 🔗 margin property
+selector {
+    margin: top, right, bottom, left
+*/
+
+/*/ margin property values */
+/* 
++ auto 
+the browser calculates the margin.
+Used to horizontally center the element within its container.
+Only work on block-level element only.
++ LENGTH
+specifies a margin in px, em, rem.
++ %
+Specifies a margin in % of the width of the containing element
++ inherit
+Specifies that the margin values should be inherited from the parent element */
+
+/*- 🔗 example 1 */
+.container {
+    margin: 5px, 10px, 20px, 40px;
+}
+
+/* ----------------- */
+/* 
+🔸 margin-top / margin-right / margin-bottom / margin-left
+📝 Specifying the margin for each side of an element. /*
+*/
+
+/*- 🔗 example 1 */
+.container {
+    margin-top: 2px;
+}
+
+/* ----------------- */
+/* 
+?🔸 CSS margin collapse
+📝 Sometimes two margins collapse into a single margin.
+📝 Top and bottom margins of elements are sometimes collapsed into a single margin that is equal 
+to the largest of the two margins.
+📝 This does not happen on left and right margins, only top and bottom margins!
+ */
+
+ /*- 🔗 example 1
+📝 Due to margin collapse, the actual margin between those two ends up being 50px. */
+.container {
+    margin-bottom: 50px;
+}
+.container_2 {
+    margin-top: 20px;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Outline 
+📝 An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".
+📝 Outline property does not take up space within the element or affect its dimensions, ...
+It is drawn outside the element's box, which means it does not affect the layout or positioning of other elements.
+
+/* ----------------- */
+/* 
+🔸 outline-style
+📝 Specifies what kind of outline style to display. */
+
+/* ----------------- */
+/* 
+🔸 outline-width
+📝 Specifies the width of the outline. */
+
+/*- 🔗 example 1 */
+.container {
+    outline-style: dashed;
+    outline-width: 2px 4px;
+}
+
+/* ----------------- */
+/* 
+🔸 outline-color
+📝 Used to set the color of the outline. */
+
+/* ----------------- */
+/* 
+🔸 outline-offset
+📝 Adds space between an outline and the edge/border of an element. 
+The space between an element and its outline is transparent. */
+
+/* ----------------- */
+/* 
+?🔸 CSS outline - shorthand property
+📝 To shorten the code, it is also possible to specify all the individual outline properties in one property.
+📝 The outline property is a shorthand property for the following individual outline properties:
+
+    1. outline-width
+    2. outline-style (required)
+    3. outline-color */
+
+/*- 🔗 example 1 */
+
+.container {
+    outline: 5px solid red;
+}

@@ -1,0 +1,555 @@
+
+
+/** -------------------------------------------------------------------------- */
+/* 📁 CHAPTER 1: CSS Introduction */
+/** -------------------------------------------------------------------------- */
+
+/* • 🧡: Main topic  */
+/* • 📝: Notes  */
+/* • 🔸: Subtopics  */
+/* • 🔗: Sub-subtopics   */
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Basic */
+
+/* ----------------- */
+/* 
+🔸 What is CSS: 
+📝 CSS stands for Cascading Style Sheets.
+📝 CSS describes how HTML elements are to be displayed on screen, paper, or in other media.
+📝 It is used to create web pages and documents.
+📝 HTML provides structure to the content appearing on a website, such as images, text, or videos. 
+*/
+
+/* ----------------- */
+/*
+🔸 How To Add CSS:
+📝 Inline CSS: Directly in the html CSS element (NOT RECOMENDED!)
+📝 Internal CSS: Using <style> tags within a single document (MEH…)
+📝 External CSS: Linking an external .css file (BEST METHOD!)
+*/
+
+/* ----------------- */
+/* 
+🔸 CSS Syntax:
+📝 A CSS rule consists of a selector and a declaration block. */
+
+/* Syntax:
+selector {
+    property: value;
+} 
+
+/*- 🔗 example 1: */
+.example {
+    color: crimson;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Comments 
+📝 CSS comments are not displayed in the browser, but they can help document your HTML source code.
+📝 CSS comment starts with /* and ends with */
+
+/* ----------------- */
+/* 
+
+/*- 🔗 example 1: */
+/* Write your comments here */
+
+/* / Comment shortcut key command: ( Control + / ) */
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 Basic CSS selector 
+📝 A CSS selector selects the HTML element(s) you want to style. */
+
+/* ----------------- */
+/*
+🔸 HTML Element Selector: 
+📝 Based on the HTML element name. */
+
+/*- 🔗 example 1: */
+h6 {
+    background-color: darkblue;
+}
+
+/* ----------------- */
+/*
+🔸 Class Selector: 
+📝 Select a specific HTML class attribute. 
+📝 To select an element with a specific class, write a (.) followed by the class name. */
+
+/*- 🔗 example 1: */
+.container_1 {
+    background-color: darkblue;
+}
+
+/* ----------------- */
+/* 
+🔸 ID Selector: 
+📝 Select a specific ID HTML element.  
+📝 ID attribute should be unique within the HTML document. 
+📝 An ID selector can only be applied to a single element.
+📝 To select an element with a specific ID, write a (#) followed by the class name. */
+
+/*- 🔗 example 1: */
+#chapter_1 {
+    background-color: darkblue;
+}
+
+/* ----------------- */
+/* 
+🔸 Universal Selector(*): 
+📝 Select all HTML elements on the page. 
+📝 To select all the HTML elements, write a (*) only. */
+
+/*- 🔗 example 1: */
+* {
+    box-sizing: inherit; 
+}
+
+/* ----------------- */
+/* 
+🔸 Grouping Selector: 
+📝 Allows you to apply the same styles to multiple selectors at once. 
+📝 To group selectors, separate each selector with a comma. */
+
+/*- 🔗 example 1: */
+h3, h4, h6 {
+    font-size: 16px;
+}
+
+/*- 🔗 example 2: */
+.section_1, .section_2, .section_3 {
+    background-color: cornsilk;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 Combinator CSS selector 
+📝 Select elements based on a specific relationship between them.
+📝 Allow you to target specific elements based on their position or relationship ...
+to other elements in the HTML structure.*/
+
+/* ----------------- */
+/* 
+🔸 descendant selector (space): 
+📝 Selects all elements that are descendants of a specified element. */
+
+/*- 🔗 example 1: */
+.test_1 p {
+    background-color: dodgerblue;
+}
+
+/* ----------------- */
+/* 
+🔸 Child combinator (>): 
+📝 Selects all direct children of a specified element only. */
+
+/*- 🔗 example 1: */
+.test_2 > p {
+    background-color: yellow;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Pseudo-classes 
+📝 A CSS pseudo-class is a keyword that is added to a selector to target ...
+a specific state based on the user's interaction.
+📝 It allows you to style elements based on various criteria that cannot be ...
+expressed with regular selectors alone. 
+📝 Pseudo-classes always start with a colon (:).
+
+/* ----------------- */
+/*🔸 Pseudo-classes based on the element state: */
+/*
++ :hover
+Selects an element when the mouse pointer is over it.
++ active 
+Selects an element when it is being activated or clicked.
++ :visited
+Selects a link that has been visited by the user.
++ :target
+Select element that is the target of the current URL fragment identifier
+(the part of the URL that follows the hash symbol #). 
+*/
+
+/*- 🔗 Example 1: */
+.button_test_1:hover {
+    background-color: red;
+}
+
+/*- 🔗 Example 2: */
+.container_2 p {
+    display: none;
+    background-color: yellow;
+    padding: 10px;
+}
+.container_2:hover p {
+    display: block;
+}
+
+/*- 🔗 Example 3: */
+.container_3 div {
+    display: none;
+}
+.container_3 div:target {
+    display: block;
+}
+
+/* ----------------- */
+/*🔸 Pseudo-classes based on element state especially for <input> element: */
+/* 
++ :focus 
+Selects <input> elements when it has focus.
+focus is triggered when <input> type element in an active state, 
+typically when it is being interacted with using the keyboard or touch input on mobile devices.
++ :focus-within 
+Selects parent element if any descendants <input> elements inside it has received focus.
+focus is triggered when <input> type element in an active state, 
+typically when it is being interacted with using the keyboard or touch input on mobile devices.
++ :checked
+Selects every checked <input> element such as radio button or checkbox that is checked in.
++ :required
+Selects <input> elements with a "required" attribute specified.
++ :valid
+Selects <input> elements with a value that validates according to the element's settings.
++ :invalid
+Selects <input> elements with a value that does not validate according to the element's settings.
+*/
+
+/*- 🔗 Example 1: */
+.form_1 input:focus {
+    background-color: yellow;
+}
+
+/*- 🔗 Example 2: */
+.form_1_1:focus-within {
+    background-color: deepskyblue;
+}
+
+/* ----------------- */
+/*🔸 Pseudo-classes based on child element: */
+/* 📝 It only works if all child elements are the same HTML element in the parent. 
+
++ :first-child
+Selects the first child element of its parent.
++ :last-child
+Selects the last child element of its parent.
++ :nth-child(NUMBER)
+Selects elements based on their position in relation to their parent. 
+For example, :nth-child(3) selects the third child element.
++ :nth-child(EVEN / ODD)
+Selects elements based on their position in relation to their parent. 
+For example, :nth-child(odd) selects all odd child element.
++ :not(SELECTOR)
+Select elements that do not match a specific selector. 
+It allows you to exclude certain elements from a selector and target
+all other elements that do not match the specified selector.
+*/
+
+/*- 🔗 Example 1: */
+.container_4 p:first-child {
+    background-color: lightgreen;
+}
+
+/* ----------------- */
+/*🔸 New pseudo-classes to provide additional functionality: */
+/* 
++ :is(SELECTOR) / is(STATE)
+Allows you to group multiple selectors together and apply a set of styles 
+if any of the selectors match an element.
+It works just like a grouping selector, but it is more concise and readable.
+*/
+
+/*- 🔗 Example 1: */
+.container_4_1:is(h1, h2, h3) {
+    color: blue;
+    font-weight: bold;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Pseudo-elements 
+📝 A CSS pseudo-elements is a keyword that is added to a selector to ...
+style specified parts of an element.
+📝 It allows you to style specific parts of an element, that cannot be ...
+expressed with regular selectors alone. 
+📝 Pseudo-classes always start with a two colons (::).
+
+/* ----------------- */
+/*🔸 Pseudo-elements to style some part of the text.*/
+/* 
++ ::first-letter
+Selects the first letter of the text content within an element.
++ ::first-line
+Selects the first line of the text content within an element.
++ ::selection
+Applies styles to the portion of text when it selected by the user.
++ ::marker
+Styles the marker of a list item for <ul> and <ol> elements.
++ ::placeholder
+Styles the placeholder text of an input or textarea element for <imput> element.
+*/
+
+/*- 🔗 Example 1: */
+.container_5 p::first-letter {
+    font-size: 200%;
+    color: #8A2BE2;
+}
+
+/*- 🔗 Example 2: */
+.container_6 p:first-child::first-letter {
+    font-size: 200%;
+    color: #8A2BE2;
+}
+
+/*- 🔗 Example 3: */
+.form_2 input::placeholder {
+    color: #8A2BE2;
+    opacity: 0.6;
+}
+
+/* ----------------- */
+/*🔸 Pseudo-elements to inserts content before / after the selected element.*/
+/*
++ ::before
+Inserts content before the selected element. 
+Use the "content property" to specify the content to insert.
+This is not working on Empty HTML Element (element without a closing tag).
++ ::after
+Inserts content before the selected element. 
+Use the "content property" to specify the content to insert.
+This is not working on Empty HTML Element (element without a closing tag).
+*/
+
+/*- 🔗 Example 1: */
+.form_3 label::before {
+    content: "🔒";
+    margin-right: 5px;
+}
+.form_3 input[type="text"] {
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+/*- 🔗 Example 2: */
+.link_1::after {
+    content: "→";
+    margin-left: 5px;
+  }
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Attribute Selectors 
+📝 CSS Attribute Selectors are selectors that allow you to target 
+HTML elements based on their attributes and attribute values.  
+
+/* 
+🔸 [attribute] Selector
+📝 Selects elements that have a specific attribute, regardless of its value.  */
+
+/*- 🔗 Example 1:
+📝 The following example selects all <a> elements with a target attribute: 
+*/
+.container a[target] {
+    background-color: yellow;
+}
+
+/* 
+🔸 [attribute="value"] Selector
+📝 Selects elements that have a specific attribute with a matching value. */
+
+/*- 🔗 Example 1:
+📝 The following example selects all <input> elements with "type" attribute of "text":
+*/
+.container input[type="text"] {
+    font-weight: 600;
+}
+
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Units 
+📝 A CSS has several different units for expressing a length.
+📝 Many CSS properties take "length" values, such as width, margin, padding, font-size, etc.
+*/
+
+/* ----------------- */
+/* 
+🔸 Absolute Length Units:
+📝 Absolute length units represent fixed physical measurements.
+📝 Absolute units offer precise control but can result in less responsive designs  */
+
+/*
++ cm / mm / inch
+centimeter / millimeters / inch.
+Useful when you need to specify sizes based on real-world physical measurements.
++ px
+It represents a single dot on a display.
+Most commonly used absolute length unit for web development.
+(Usually used just for border or shadow)
+*/
+
+/* ----------------- */
+/* 
+🔸 Relative Length Units:
+📝 Relative length units allow elements to scale and adapt to different screen sizes and devices.
+📝 Relative units enable the design to respond to changes in font sizes, viewport dimensions, ...
+or the size of parent elements. */
+
+/*
++ Percentage (%)
+Represents a proportion relative to the parent element or the container's available space.
+Allows elements to scale proportionally based on parent or container sizes.
+It is commonly used for creating fluid and responsive layouts.
++ REM (rem)
+Relative to font-size of the root element.
+It provides a consistent sizing reference across the entire document.
+(default - 16px: 1rem)
+(root font-size can be changed in <html> element)
+It is often used for global typography and layout settings.
++ EM (em)
+It allows for cascading resizing based on the parent-child relationship.
+(parent font size: 1rem)
+It is often used for fine-grained adjustments within specific components or sections.
++ Viewport Width (vw) / Viewport Height (vh)
+Represents a percentage of the viewport's width or height.
+1vw corresponds to 1% of the viewport's width. 
+1vh corresponds to 1% of the viewport's height.
+These units are useful for creating responsive designs that adapt to different screen sizes.
+*/
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Specificity 
+📝 If there are two or more CSS rules that point to the same element, 
+the selector with the highest specificity value will "win", and its style 
+declaration will be applied to that HTML element.
+*/
+
+/* ----------------- */
+/* 
+🔸 Specificity Hierarchy from most specific to least:
+
++ Inline styles
+<h1 style="color: pink;">
++ ID selectors
+#navbar
++ Class selectors, attribute selectors, and pseudo-classes
+.container / input[type="text"] / ul:hover
++ Elements and pseudo-elements
+h1 / .container::before 
+
+*/
+/* ----------------- */
+/* 
+🔸 Override ALL specificity Hierarchy with "!important" rule
+📝 "!important" is a declaration that can be added to give it the highest specificity and 
+override any conflicting styles. 
+📝 It's important to note that using !important should be done sparingly and with caution. 
+Overusing "!important" can lead to code that is difficult to maintain and debug, 
+as it can override styles unexpectedly. 
+*/
+
+/*- 🔗 example 1: */
+.container {
+    color: red !important;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Math Functions 
+📝 The CSS math functions allow mathematical expressions to be used as property values.
+
+/* ----------------- */
+/* 
+🔸 calc(expression)
+📝 This function allows you to perform arithmetic calculations and combine different 
+units within a single CSS property value. 
+📝 It supports addition (+), subtraction (-), multiplication (*), and division (/) operations. */
+
+/*- 🔗 example 1: */
+.container {
+    width: calc(100% - 100px);
+  }
+
+/* ----------------- */
+/* 
+🔸 max(value1, value2, ...)
+📝 This function returns the maximum value among the provided arguments. 
+📝 It is helpful for setting upper limits based on the maximum value of multiple options. */
+
+/*- 🔗 example 1:
+📝 Use max() to set the width of .container to whichever value is largest, 50% or 300px */
+
+.container {
+    width: max(50%, 300px);
+}
+
+/*- 🔗 example 2:
+📝  difference between max() values and max-width property: */
+.container_7 {
+    border: 1px solid black;
+}
+.container_7 .box {
+    padding: 20px;
+    background-color: lightgray;
+    margin: 0px 10px 10px 10px;
+}
+.container_7 .box1 {
+    max-width: 400px;
+}
+.container_7 .box2 {
+    width: max(200px, 50%, 30vw);
+}
+
+/* ----------------- */
+/* 
+🔸 min(value1, value2, ...)
+📝 This function returns the minimum value among the provided arguments. 
+📝 It is useful when you want to ensure a property value never below a certain limit 
+based on the minimum value of multiple options. */
+
+/*- 🔗 example 1:
+📝 Use min() to set the width of .container to whichever value is smallest, 50% or 300px */
+
+.container {
+    width: min(50%, 300px);
+}
+
+/* ----------------- */
+/* 
+🔸 clamp(minimum value, preferred value, maximum value)
+📝 This function restricts a value within a specified range.
+📝 The preferred value is returned if it falls within the specified range; ...
+otherwise, the minimum or maximum value is returned. */
+
+/*- 🔗 example 1: */
+.container h1 {
+    font-size: clamp(12px, 3vw, 24px);
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Variables 
+📝 CSS Variables provide a way to store information in the form of variables, ...
+making it easier to manage and update styles across multiple elements or components.
+📝 CSS variables are defined using the ( -- ) prefix followed by a name and a value. 
+
+/* ----------------- */
+/* 
+🔸 :root
+📝 The :root pseudo-class represents the root element of the document, ...
+which is typically the <html> element. 
+📝 It is recommended to declare variables within the :root selector, ...
+as it ensures that the variables are accessible and ...
+can be used anywhere within the document.*/
+
+/*- 🔗 example 1: */
+:root {
+    --primary_color: hsl(183, 70%, 98%);
+    --secondary_clr: hsl(203, 39%, 44%);
+}
+
+/* ----------------- */
+/* 
+🔸 var(VARIABLE_NAME)
+📝 Once a CSS variable is defined, it can be used in any CSS rule by ...
+referencing its name by using var() function.
+*/
+
+/*- 🔗 example 1: */
+.container {
+    background-color: var(--primary_color);
+}

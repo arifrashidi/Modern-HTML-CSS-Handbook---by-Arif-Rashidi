@@ -1,0 +1,4 @@
+
+# This file will specify which files should be ignored by Git when tracking changes in a repository.
+
+secret.txt

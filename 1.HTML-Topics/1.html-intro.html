@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Introduction</title>
+</head>
+<body>
+    
+<!--* -------------------------------------------------------------------------- -->
+<!-- 📁 CHAPTER 1: HTML Introduction -->
+<!--* -------------------------------------------------------------------------- -->
+
+<!-- • 🧡: Main topic -->
+<!-- • 📝: Notes -->
+<!-- • 🔸: Subtopics -->
+<!-- • 🔗: Sub-subtopics  -->
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Basic -->
+
+<!-- ----------------- -->
+<!-- 
+🔸 What is HTML: 
+📝 HTML is the standard markup language for Web pages.
+📝 It is NOT a programming language.
+📝 It is used to create web pages and documents.
+📝 HTML provides structure to the content appearing on a website, such as images, text, or videos. -->
+
+<!-- ----------------- -->
+<!-- 
+🔸 HTML Element Syntax:
+📝 Some tags close themselves. -->
+<!-- Syntax: < opening_tag > CONTENT < closing_tag > -->
+<!--- 🔗 example 1: -->
+<h1>This is a test</h1>
+
+<!-- ----------------- -->
+<!-- 
+🔸 Empty HTML Element:
+📝 HTML elements with no content are called empty elements. -->
+<!--- 🔗 example 1: -->
+<br>
+<img>
+<input type="text">
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Comments -->
+<!-- 
+📝 HTML comments are not displayed in the browser, but they can help document your HTML source code. -->
+
+<!--- 🔗 example 1: -->
+<!-- Write your comments here -->
+
+<!-- / Comment shortcut key command: ( Control + / ) -->
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 Block and Inline Elements 
+📝 Every HTML element has a default display value, depending on what type of element it is. 
+📝 There are two display values: block and inline. -->
+
+<!-- ----------------- -->
+<!-- 
+🔸 Block element
+📝 A block-level element always starts on a new line.
+📝 A block-level element always takes up the full width available. -->
+
+<!--- 🔗 block elements in HTML: -->
+<h1></h1> - <h6></h6>
+<address></address>
+<dt></dt>
+<hr>
+<section></section>
+<article></article>
+<fieldset></fieldset>
+<li></li>
+<table></table>
+<aside></aside>
+<figcaption></figcaption>
+<main></main>
+<tfoot></tfoot>
+<blockquote></blockquote>
+<figure></figure>
+<nav></nav>
+<ul></ul>
+<canvas></canvas>
+<footer></footer>
+<noscript></noscript>
+<video src=""></video>
+<dd></dd>
+<form action=""></form>
+<ol></ol>
+<div></div>
+<p></p>
+<dl></dl>
+<header></header>
+<pre></pre>
+
+<!-- 
+🔸 Inline element
+📝 An inline element does not start on a new line.
+📝 An inline element only takes up as much width as necessary. -->
+<!--- 🔗 inline elements in HTML: -->
+<a href=""></a>
+<cite></cite>
+<label for=""></label>
+<small></small>
+<var></var>
+<abbr title=""></abbr>
+<code></code>
+<map name=""></map>
+<span></span>
+<dfn></dfn>
+<object data="" type=""></object>
+<strong></strong>
+<b></b>
+<em></em>
+<output></output>
+<sub></sub>
+<bdo dir=""></bdo>
+<i></i>
+<q></q>
+<sup></sup>
+<img src="" alt="">
+<samp></samp>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<br>
+<input type="text">
+<script></script>
+<button></button>
+<kbd></kbd>
+<select name="" id=""></select>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML documents -->
+<!--
+📝 All HTML documents must start with a document type declaration: <!DOCTYPE html>
+📝 The HTML document itself begins with <html> and ends with </html>.
+📝 The visible part of the HTML document is between <body> and </body>. -->
+
+<!--/ 📝 HTML document shorthand: ! -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 <head> element -->
+<!-- 
+📝 The <head> element is a container for metadata (data about data).
+📝 This element placed between the <html> tag and the <body> tag. 
+📝 Metadata typically define the document:
+•	title
+•   character set
+•	styles
+•	icon -->
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 <body> element -->
+<!-- 
+📝 <body> element represents the main content area of a web page.
+📝 Anything that is visible to the user on a web page is usually placed within the <body> tags. -->
+
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Attributes -->
+<!-- 
+📝 All HTML elements can have attributes.
+📝 Attributes provide additional information about elements.
+📝 Attributes are always specified in the start tag.
+📝 Attributes usually come in name/value pairs like: name="value". -->
+
+<!--- 🔗 example 1: 
+📝 href is attributes for <a> -->
+<a href="https://www.youtube.com/watch?v=MVPTGNGiI-4&ab_channel=LofiGirl">Lofi Girl</a>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Semantic Elements -->
+<!-- 
+📝 By using these semantic elements, you provide additional information to both human users ...
+and search engines, making your content more accessible, meaningful, and well-structured.
+📝 Examples of semantic elements: 
+<form>, <table>, and <article>. 
+📝 Examples of non-semantic elements: 
+<div> and <span> -->
+
+<!--- 🔗 example 1:
+📝 Using <nav> provide contextual information about the structure and purpose of the content. -->
+
+<nav>
+    <a href="/html/">HTML</a> |
+    <a href="/css/">CSS</a> |
+    <a href="/js/">JavaScript</a> |
+    <a href="/jquery/">jQuery</a>
+</nav>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 Naming Convention with BEM -->
+<!-- 
+📝 BEM stands for Block, Element, Modifier and is a naming convention or methodology 
+used in web development to create modular and maintainable CSS code. 
+📝 The BEM aims to create a clear and predictable hierarchy in class names,
+making it easier to understand and manage styles across a project. -->
+
+<!-- ----------------- -->
+<!-- 🔸 Here's a simple explanation of BEM and how to use it:
+
+<!--
+🔗 Block 
+📝 A block represents a standalone component of a webpage.
+📝 It can be a header, menu, card, form, or any other self-contained unit.
+📝 Blocks are usually represented by a class name in HTML. -->
+
+<!--- 🔗 example 1: -->
+<div class="nav"></div>
+
+<!--- 🔗 example 2: -->
+<div class="header"></div>
+
+<!--
+🔗 Element 
+📝 An element is a part of a block that has a specific function within that block. 
+📝 Use the block's class name followed by "__" and a descriptive name for the element.  
+📝 Example: .header__logo / .card__title / .menu__item. -->
+
+<!--- 🔗 example 1: -->
+<div class="nav">
+    <a href="" class="nav__link">About</a>
+    <a href="" class="nav__link">Pricing</a>
+    <a href="" class="nav__link">Login</a>
+</div>
+
+<!--- 🔗 example 2: -->
+<div class="header">
+    <div class="header__logo"></div>
+    <nav class="header__navigation">
+        <ul class="header__navigation__menu">
+            <li class="header__navigation__menu__item"></li>
+            <li class="header__navigation__menu__item"></li>
+        </ul>
+    </nav>
+</div>
+
+<!--
+🔗 Modifier 
+📝 Flags on blocks or elements. Use them to change appearance, behavior or state.
+📝 Use the block or element's class name followed by "--" and a descriptive name for the modifier.
+📝 Example: .button--disabled /.card--highlighted, / .menu__item--active. -->
+
+<!--- 🔗 example 1: -->
+<div class="nav">
+    <a href="" class="nav__link">About</a>
+    <a href="" class="nav__link">Pricing</a>
+    <a href="" class="nav__link">Login</a>
+    <a href="" class="nav__link nav__link--special">Get Started</a>
+</div>
+
+<!--- 🔗 example 2: -->
+<div class="header">
+    <div class="header__logo"></div>
+    <nav class="header__navigation">
+        <ul class="header__navigation__menu">
+            <li class="header__navigation__menu__item"></li>
+            <li class="header__navigation__menu__item header__navigation__menu__item--active"></li>
+        </ul>
+    </nav>
+</div>
+
+
+<!--* -------------------------------------------------------------------------- -->
+
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+@use './partial_scss_files/forward_file' as partial;
+
+//* --------------------------------------------------------------------------
+// 📁 CHAPTER 1: Sass Notes
+//* --------------------------------------------------------------------------
+
+// • 🧡: Main topic 
+// • 📝: Notes 
+// • 🔸: Subtopics 
+// • 🔗: Sub-subtopics  
+
+//* --------------------------------------------------------------------------
+// 🧡 Sass Basic 
+
+// -----------------
+// 🔸 What is Sass: 
+// 📝 Sass (Syntactically Awesome Style Sheets) is a popular preprocessor ...
+// scripting language that extends the capabilities of CSS.
+// 📝 It is commonly used in web development to make CSS more efficient, maintainable, and powerful.
+// 📝 When working with Sass, you write your stylesheets in the Sass syntax, which is then ...
+// compiled into regular CSS code. 
+
+// -----------------
+// 🔸 How to compile Sass file to regular css code: 
+// 📝 To use Sass, you need a Sass compiler (such as live Sass compiler extension) ...
+// that translates Sass code into regular CSS code.
+
+//? 🔗 1. Using Vs Code extension: 
+// 📝 Sass compiler extensions for VS Code (such as Live Sass Compiler by Glenn Marks) ...
+// provide built-in tools and capabilities to compile Sass files within the editor.
+
+//+ If you use "Live Sass Compiler" Extension:
+// 📝 You can change many configuration in Sass JSON setting. especially ...
+// in "savePath" and "format" section in User Setting(JSON):
+// • "format" = This setting specifies the output format for the compiled CSS.
+// • "savePath" = Defines the destination folder where the compiled CSS files will be saved.
+/* 
+  {
+    "format": "[COMPRESSED / EXPANDED]",
+    "extensionName": ".css",
+    "savePath": [DIST / NULL],
+    "savePathReplacementPairs": null
+  }
+*/
+
+//? 🔗 1. Build Tools (more professional):
+// 📝 Build tool like (Parcel & Vite) can compile your "Sass files" and ...
+//  provide live-reloading functionality using a server. 
+// 📝 You need  to <link> your HTML file with Aass file in the <head> section.
+
+// -----------------
+// 🔸 Which file to use (.sass) file or (.css) file:
+// 📝 In terms of functionality and features, Sass and SCSS are identical. 
+// 📝 The choice between Sass and SCSS mainly comes down to personal preference.
+
+//? 🔗 (.sass) file
+// 📝 It does not use semicolons or curly braces.
+// 📝 It uses file (.sass) extension.
+
+//? 🔗 (.scss) file
+// 📝 Uses the same syntax as regular CSS.
+// 📝 It uses curly braces and semicolons, similar to CSS.
+// 📝 It uses file (.sass) extension.
+// 📝 scss are more commonly used and preferred by developers.
+
+// -----------------
+// 🔸 dist folder
+// 📝 "dist" folder stands for "distribution".
+// 📝 The "dist" folder contains the final CSS files that are ready to be deployed.
+// 📝 The purpose of separating the compiled CSS files into a "dist" folder is ...
+// to keep the development source files separate from the final output. 
+
+// -----------------
+// 🔸 Sass comments
+// 📝 Sass supports both single-line (//) and multiline (/* */) comments.
+
+
+//* --------------------------------------------------------------------------
+// 🧡 Sass Variables Features 
+// 📝 Sass allows you to define and use variables to store values ...
+//  such as colors, font sizes, or any other CSS property. 
+// 📝 This promotes code reusability, consistency, and easy maintenance.
+
+// -----------------
+// 🔸 How to assign variable:
+// 📝 Assign a value to a name that begins with "$", and then you can ...
+//  refer to that name instead of the value itself.
+
+// syntax: 🔗 variables: 
+//. $VARIABLES_NAME: VALUES;
+
+//- 🔗 example 1:
+$primary_clr: hsl(183, 70%, 98%);
+
+// -----------------
+// 🔸 How to use the variable:
+// 📝 To use the variable, simply reference it using the $ symbol.
+
+//- 🔗 example 1:
+.container {
+    background-color: $primary_clr;
+}
+
+//* --------------------------------------------------------------------------
+// 🧡 Sass Nesting Features 
+// 📝 Sass supports nesting of selectors, allowing you to write nested ...
+// CSS rules within the parent selector. 
+// 📝 This feature improves code organization and readability by reflecting 
+// the HTML structure directly in your stylesheet.
+
+// -----------------
+// 🔸 How to nesting:
+// 📝 Simply nest your CSS rules inside the parent selector. 
+// 📝 "&" symbol is used within nesting to refer to the "parent selector" ...
+// and combine it with other selectors or pseudo-classes.
+
+//- 🔗 example 1:
+.container {
+  color: blueviolet;
+
+  h1 {
+    font-weight: 600;
+  }
+  p {
+    font-weight: 400;
+  }
+}
+
+//- 🔗 example 2:
+.container {
+    background-color: lightblue;
+
+    &:hover {
+      background-color: blue;
+    }
+}
+
+//* --------------------------------------------------------------------------
+// 🧡 Sass Mixins Features 
+// 📝 Mixins are reusable blocks of CSS declarations that can be included in multiple selectors or rules. 
+// 📝 They are defined once and can be called anywhere in your stylesheets. 
+// 📝 Mixins help in reducing code duplication and promoting modularity.
+
+// -----------------
+// 🔸 How to define mixins:
+// 📝 Define a mixin using the @mixin directive followed by a name and the CSS declarations.
+// 📝 Property
+
+// syntax: 🔗 @mixins: 
+/* 
+@mixin MIXIN_NAME() {
+  CSS DECLARATION.
+}
+*/
+
+//- 🔗 example 1:
+@mixin button_styles {
+  background-color: #f00;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+// -----------------
+// 🔸 How to use mixins:
+// 📝 To include a mixin, use the @include directive followed by the mixin name.
+
+// syntax:  @include: 
+/* 
+SELECTOR {
+  @include MIXIN_NAME;
+}
+*/
+
+//- 🔗 example 1:
+.button_1 {
+  @include button_styles;
+}
+
+//* --------------------------------------------------------------------------
+// 🧡 Sass Partial Features 
+// 📝 Partials allow you to break your stylesheets into smaller files, ...
+// and include those smaller files into the main Sass file.
+// 📝  This feature enables better organization of your codebase and ...
+// allows you to include specific stylesheets only when needed.
+
+// -----------------
+// 🔸 How to create partial file:
+// 📝 These partials sass files start with an underscore (_) in their filename.
+// example: ( _partial.scss ).
+
+// -----------------
+// 🔸 @use feature: 
+// 📝 Use "@use" keyword to import code from other Sass files.  
+// 📝 It allows you to bring in functionality(such as variables, mixins, functions) ...
+// from other files into your main file.
+// 📝 "@use" keyword should be placed at the top of the document.
+
+// 📝 It also introduces namespace-like scoping to avoid naming conflicts.
+// 📝 use ( * ) namespace is to import all members from the 'module' Sass file.
+// 📝 use ( * ) can be convenient but also introduce potential naming conflicts if there ...
+// are similar names used across different modules. 
+// syntax: 🔗 @use: 
+// @use 'path/to/module' as MODULE_NAME_SPACE ⭐(optional);
+
+//- 🔗 example 1:
+// @use './partial_scss_files/forward_file' as partial;
+header h1 {
+  color: partial.$primary_clr;
+  font-weight: 600;
+}
+
+//- 🔗 example 2:
+// @use './colors' as *;
+.container {
+  color: $primary_clr;
+  font-weight: 600;
+}
+
+// -----------------
+// 🔸 @forward feature:
+// 📝 Used @forward keyword to share code from one Sass file with other files.
+// 📝 It allows you to create a public API for your Sass module, ...
+// exposing selected parts of the code to other files without ...
+// directly importing the entire module. 
+// 📝 "@forward" keyword should be placed at the top of the document.
+// syntax: 🔗 @use: 
+// @forward 'path/to/module';
+
+//- 🔗 example 1:
+// @forward './colors';
+
+header {
+  @include partial.flex_column;
+}
+
+//* --------------------------------------------------------------------------
+// 🧡 Sass Inheritance Features 
+// 📝 Inheritance allows you to inherit all the styles of one selector with another.
+// 📝 Inheritance helps in keeping your codebase DRY ...
+// (Don't Repeat Yourself) by reusing existing styles.
+// 📝 This feature maybe not very useful than others Sass features.
+
+// -----------------
+// 🔸 How to use inheritance features:
+// 📝 Use the "@extend" keyword followed by the selector you want to inherit. 
+// 📝 you can overwrite specific properties of the inherit selector ...
+// by redefining them within the extending selector. 
+
+// syntax:  @extend: 
+/* 
+SELECTOR {
+  @extend SELECTOR_THAT_WE_TO_INHERIT;
+}
+*/
+
+//- 🔗 example 1:
+.container {
+    background-color: coral;
+    height: 100vh;
+}
+
+.container_2 {
+    @extend .container;
+    background-color: blueviolet;
+}
+
+//* --------------------------------------------------------------------------
+// 🧡 Sass Operators Features 
+// 📝 Sass supports arithmetic operators (+, -, *, /, %) that allow you to perform ...
+// mathematical calculations directly within your stylesheets without using calc() function.
+// 📝 While Sass provides support for mathematical expressions, there limitations to ...
+// this feature, that why using calc() function is more reliable.
+// 📝 This feature maybe not very useful than others Sass features.
+
+//- 🔗 example 1:
+.container {
+  height: calc(100vh - 100px);
+  margin: 30px / 3;
+}
+
+//* --------------------------------------------------------------------------

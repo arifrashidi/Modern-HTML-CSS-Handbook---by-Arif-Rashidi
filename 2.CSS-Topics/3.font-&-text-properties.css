@@ -1,0 +1,257 @@
+
+/** -------------------------------------------------------------------------- */
+/* 📁 CHAPTER 4: Font & Text Properties */
+/** -------------------------------------------------------------------------- */
+
+/* • 🧡: Main topic  */
+/* • 📝: Notes  */
+/* • 🔸: Subtopics  */
+/* • 🔗: Sub-subtopics   */
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Text 
+📝 CSS has a lot of properties for formatting text.
+
+/* ----------------- */
+/* 
+🔸 color / background-color
+📝 Used to set the color of the text. */
+
+/* ----------------- */
+/* 
+🔸 text-align
+📝 Used to set the horizontal alignment of a text. */
+
+/*/ text-align property values */
+/* 
++ centered 
+ Centers the text horizontally within the container.
++ right
+Aligns the text to the right edge of the container. 
++ left
+Aligns the text to the left edge of the container. 
++ justified
+Adjusts the text to both the left and right edges of the container.
+This value distributes the extra space between words, 
+creating straight edges on both sides. 
+It is commonly used for paragraphs or blocks of text. */
+
+/* ----------------- */
+/* 
+🔸 vertical-align
+📝 Used to vertically align inline or inline-block elements within their containing element. */
+
+/* ----------------- */
+/* 
+🔸 text-decoration
+📝 Used to add or remove a decoration line to text. */
+
+/*/ all text-decoration properties */
+/* 
++ text-decoration-line
+Used to add a decoration line to text, such as underline, overline, and underline.
++ text-decoration-color
+Used to set the color of the decoration line.
++ text-decoration-style
+Used to set the style of the decoration line, such as solid, double, dotted, dashed and wavy.
++ text-decoration-thickness
+Used to set the thickness of the decoration line. */
+
+/* 
+?🔗 text-decoration - shorthand property
+📝 To shorten the code, it is also possible to specify all the individual text-decoration properties in one property.
+📝 The text-decoration property is a shorthand property for the following individual outline properties:
+
+    1. text-decoration-line (required)
+    2. text-decoration-color 
+    3. text-decoration-style 
+    4. text-decoration-thickness */
+
+/*- 🔗 example 1 */
+p {
+    text-decoration: underline blue dotted 2px;
+}
+
+/* ----------------- */
+/* 
+🔸 text-transform
+📝 Used to specify uppercase and lowercase letters in a text. */
+
+/* ----------------- */
+/* 
+🔸 text-transform
+📝 Used to specify uppercase and lowercase letters in a text. */
+
+/* ----------------- */
+/* 
+🔸 TEXT SPACING
+📝 Text spacing refers to the control of the space between characters, words, and lines of text  */
+
+/* 
++ letter-spacing  
+📝 Used to specify the space between the letter in a text.
++ line-height  
+📝 Used to specify the space between lines.
++ word-spacing  
+📝 Used to specify the space between the words in a text.
++ white-space  
+📝 Used to controls how white space within an element is handled, such as wrapping a long lines of text.
+Here are the commonly used values: nowrap, pre, pre-wrap, pre-line, and break-spaces.
+*/
+
+/* ----------------- */
+/* 
+🔸 text-shadow
+📝 Used to adds shadow to text. */
+
+/*syntax: 🔗 text-shadow property
+selector {
+    text-shadow: horizontal, vertical, blur, color
+*/
+
+/*- 🔗 example 1 */
+h1 {
+    text-shadow: 2px 2px red;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Fonts 
+
+/* ----------------- */
+/* 
+🔸 font-family
+📝 Specify the font of a text.
+📝 Font-family property should old several font names as a "fallback" system.
+📝 Start with the font you want, and end with a generic family.
+📝 The browser will try each font name in the order they are specified until it finds ...
+a font that is available. */
+
+/*? 🔗 web safe fonts
+📝 Web safe fonts are fonts that are universally installed across all browsers and devices. 
+📝 The following list are the best web safe fonts for HTML and CSS:
+
+• Arial (sans-serif)
+• Verdana (sans-serif)
+• Tahoma (sans-serif)
+• Trebuchet MS (sans-serif)
+• Times New Roman (serif)
+• Georgia (serif)
+• Garamond (serif)
+• Courier New (monospace)
+• Brush Script MT (cursive)
+*/
+
+/*- 🔗 example 1 */
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*? 🔗 how to import external font
+
++ 1. @import
+📝 Add an @import rule at the top to import the font.
+📝 This rule is used for importing external CSS files into other CSS files.
+example: @import url('https://fonts.googleapis.com/css?family=FontName');
+OR
++ 2. <link>
+📝 You can link to the font using a <link> tag in the HTML file's <head> section.
+example: <link href="https://fonts.googleapis.com/css?family=FontName" rel="stylesheet">
+OR
++ 3. @font-face
+📝 Add an @font-face in css to specify and load custom font files for use in web pages.
+📝 Using @font-face when you have specific font files that you want to embed or link to.
+📝 The best font format to use when using the @font-face rule in CSS is WOFF2.
+example: 
+@font-face {
+  font-family: 'MyFont';
+  src: url('myfont.woff') format('woff2');
+} 
+
+*/
+
+/* ----------------- */
+/* 
+🔸 font-style
+📝 Is mostly used to specify italic text. This property values is normal and italic */
+
+/* ----------------- */
+/* 
+🔸 font-size
+📝 Sets the size of the text. 
+📝 To allow users to resize the text (in the browser menu), many developers use em or rem instead of px.
+📝 To solve the problem with older versions of Internet Explorer, 
+set a default font-size in 100% percent for the <body> element.
+*/
+
+/*- 🔗 example 1 */
+p {
+    font-size: 1.6rem;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Icons 
+📝 Icons can easily be added to your HTML page, by using an icon library. */
+
+/* ----------------- */
+/* 
+🔸 how add icons using icon libraries.
+
++ 1. Add code
+📝 You need to add a <link> or <script> code from any icon library website in your HTML file. 
+This is usually done in the <head> section. 
++ 2. Add link
+📝 Add the name of the specified icon class to any inline HTML element (Recommended: <i> or <span>).
++ 2. Customize
+All the icons in the icon libraries below, are scalable vectors that can be customized with CSS 
+(size, color, shadow, etc.)
+*/
+
+/*- 🔗 example 1 
+📝 Example: <link> code in the <head> section: 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+📝 Example: add icon in HTML:
+<i class="fa-solid fa-file-pdf"></i>
+
+*/
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Lists 
+📝 There are two main types of lists in HTML: Ordered Lists (<ol>) and Unordered Lists (<ul>) */
+
+/* ----------------- */
+/* 
+🔸 list-style-type
+📝 used to specify the type of marker or symbol used for list items in an <ul> or <ol>.  */
+
+/*/ list-style-type for unordered lists (<ul>) values */
+/* 
++ none
+No marker is displayed.
++ disc
+A filled circle is used as the marker.
++ circle
+An empty circle is used as the marker.
++ square
+A filled square is used as the marker. */
+
+/*/ list-style-type for unordered lists (<ol>) values */
+/* 
++ decimal
+Numbers are used as the marker.
++ lower-alpha
+Lowercase letters (a, b, c, ...) are used as the marker.
++ upper-alpha
+Uppercase letters (A, B, C, ...) are used as the marker.
++ lower-roman
+Lowercase Roman numerals (i, ii, iii, ...) are used as the marker.  */
+
+/*- 🔗 example 1: */
+ul {
+    list-style-type: circle;
+}
+
+/*- 🔗 example 2: */
+ol {
+    list-style-type: decimal;
+}

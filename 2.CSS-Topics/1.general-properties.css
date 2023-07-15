@@ -1,0 +1,248 @@
+
+/** -------------------------------------------------------------------------- */
+/* 📁 CHAPTER 2: General Properties */
+/** -------------------------------------------------------------------------- */
+
+/* • 🧡: Main topic  */
+/* • 📝: Notes  */
+/* • 🔸: Subtopics  */
+/* • 🔗: Sub-subtopics   */
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Colors 
+📝 Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values. */
+
+/* ----------------- */
+/* 
+🔸 color
+📝 You can set the color of text, border, inline elements and many more. */
+
+/*/ color values */
+/* 
++ Color Name 
+red
++ RGB
+(255, 99, 71)
++ HEX
+(#ff6347)
++ HSL
+(0, 100%, 50%) - Can change color saturation & lighting easily) */
+
+/*- 🔗 example 1 */
+h1 {
+    color: blueviolet;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Background Properties 
+📝 The background properties are used to add background effects for elements. */
+
+/* ----------------- */
+/* 
+🔸 background-color
+📝 Specifies the background color of an element. */
+
+
+/*- 🔗 example 1 */
+.container {
+    background-color: beige;
+}
+
+/* ----------------- */
+/* 
+🔸 background-image
+📝 Specifies an image to use as the background of an element.
+📝 By default, the image is repeated so it covers the entire element. */
+
+/*/ background-image values */
+/* 
++ url()
+Specifies the path to the image. */
+
+/* ----------------- */
+/* 
+🔸 background-repeat: no-repeat
+📝 Showing the background image only once
+📝 By default, the image is repeated so it covers the entire element. */
+
+
+/* ----------------- */
+/* 
+🔸 background-position
+📝 Specify the position of the background image. */
+
+/*/ background-position values */
+/* 
++ POSITION KEYWORDS
+You can use keywords such as (top, bottom, left, right) to specify the position.
++ center
+image will be positioned at the center of the element.
+*/
+
+/*- 🔗 example 1 */
+.container {
+    background-image: url(/Assets/Picture_element/wallpaper\2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ----------------- */
+/* 
+🔸 background-attachment
+📝 Specify whether the background image should scroll or be fixed  */
+
+/*/ background-attachment values */
+/* 
++ scroll (default)
+Scroll with the rest of the page 
++ fixed
+Will not scroll with the rest of the page
+*/
+
+/*- 🔗 example 1 */
+.container {
+    background-image: url(/Assets/Picture_element/wallpaper\2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ----------------- */
+/* 
+🔸 background-size
+📝 Used to specify the size of a background image or gradient within an element. */
+
+/*/ background-attachment values */
+/* 
++ auto (default)
+It preserves the original size of the background image.
++ LENGTH
+Specifies a margin in px, em, rem.
++ %
+Use a percentage value to define the size of the background image 
+relative to the size of the container. 
++ contain
+This value scales the background image proportionally to fit inside the container 
+while maintaining its aspect ratio. The entire background image will be visible, 
+but there may be empty space inside the container if the aspect ratios do not match.
++ cover
+This value scales the background image proportionally to cover the entire container, 
+ensuring that the entire container is filled. This may result in some parts of the 
+background image being cropped if the aspect ratios do not match.
+*/
+
+/*- 🔗 example 1 */
+.container {
+    background-image: url(/Assets/Picture_element/wallpaper\2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Box shadow 
+
+/* ----------------- */
+/* 
+🔸 box-shadow
+📝 Used to apply shadows to an element. */
+
+/*syntax: 🔗 text-shadow property
+selector {
+    box-shadow: horizontal, vertical, blur-radius, spread-radius, color
+*/
+
+/*- 🔗 example 1 */
+.container {
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2) ;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Filter For Image 
+
+/* ----------------- */
+/* 
+🔸 filter
+📝 Used to apply visual effects to elements, such as adjusting colors, blurring, or adding texture. */
+
+/*/ filter property values */
+/* 
++ blur(0px - 50px)
+Applies a blur effect to the image.
+Adjusts the brightness of the image.
++ contrast(0% - 200%)
+Adjusts the contrast of the image.
++ saturate(0% - 200%)
+Saturates the image.
++ grayscale(0% - 100%)
+Converts the image to grayscale.
++ invert(0% - 100%)
+Inverts the samples in the image.
+*/
+
+/*- 🔗 example 1 */
+img {
+    filter: brightness(150%);
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Object Fit & Position for Image & Video 
+
+/* ----------------- */
+/* 
+🔸 object-fit
+📝 Used to control how an image or video fits within its container element. 
+📝 It specifies how the content of an element with a specified width and height should be resized ...
+and positioned when it doesn't fit perfectly. */
+
+/*/ object-fit property values */
+/* 
++ fill (default)
+The image is resized to fill the given dimension. 
+If necessary, the image will be stretched or squished to fit.
++ contain
+The image keeps its aspect ratio, but is resized to fit within the given dimension.
+The entire content is visible, and empty spaces may appear within the container if 
+the aspect ratios do not match.
++ cover
+The image keeps its aspect ratio and fills the given dimension. The image may 
+exceed the container's dimensions, and some parts of it may be cropped.
++ none
+This value displays the content at its original size, ignoring the container's dimensions. 
+If the content is larger than the container, it may overflow.
++ scale-down
+This value behaves like none if the content is smaller than the container, 
+but switches to contain if the content is larger. It chooses the option that results
+ in the smaller displayed content.
+*/
+
+/*- 🔗 example 1 */
+img {
+    object-fit: cover;
+}
+
+/* ----------------- */
+/* 
+🔸 object-position 
+📝 Used to specify the alignment or positioning of the content within its container 
+when using the object-fit property. 
+📝 It allows you to control the placement of images or videos within their containing elements. */
+
+/*syntax: 🔗 object-position property
+selector {
+    object-position: horizontal, vertical;
+*/
+
+/*/ object-position property values */
+/* 
++ POSITION KEYWORDS
+You can use keywords such as (top, bottom, left, right, center) to specify the position.
++ %
+Positions the content using percentage values.
++ px
+Positions the content with a specific offset using pixel values.
+*/
+
+/*- 🔗 example 1 */
+img {
+    object-fit: cover;
+    object-position: center center;
+}

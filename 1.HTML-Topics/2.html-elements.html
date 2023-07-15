@@ -1,0 +1,840 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Introduction</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/Assets/HTML logo.png" type="image/x-icon">
+</head>
+<body>
+    
+<!--* -------------------------------------------------------------------------- -->
+<!-- 📁 CHAPTER 2: HTML Elements -->
+<!--* -------------------------------------------------------------------------- -->
+
+<!-- • 🧡: Main topic -->
+<!-- • 📝: Notes -->
+<!-- • 🔸: Subtopics -->
+<!-- • 🔗: Sub-subtopics  -->
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Elements in <head> -->
+
+<!-- ----------------- -->
+<!--
+🔸 <title>
+📝 Defines the title of the document 
+📝 It is shown in the browser's title bar or in the page's tab.--> 
+
+<!-- ----------------- -->
+<!--
+🔸 <link>
+📝 Defines the relationship between the current document and an external resource, such as:
+• link to css
+• favicon 
+• etc -->
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Website Layout Elements ✨(SEMANTIC ELEMENTS) -->
+
+<!-- ----------------- -->
+<!--
+🔸 <header>
+📝  Represents the introductory or top section of a webpage or a section within an article. --> 
+
+<!--- 🔗 example 1: -->
+<header>
+    <h1>Website Title</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+</header>
+
+<!-- ----------------- -->
+<!--
+🔸 <nav>
+📝 Defines a navigation menu or links to other pages. --> 
+
+<!--- 🔗 example 1: -->
+<nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ----------------- -->
+<!--
+🔸 <main>
+📝 Represents the main content of a document. --> 
+
+<!--- 🔗 example 1: -->
+<main></main>
+
+<!-- ----------------- -->
+<!--
+🔸 <section>
+📝 Defines a section in a document. --> 
+
+<!--- 🔗 example 1: -->
+<section></section>
+
+<!-- ----------------- -->
+<!--
+🔸 <footer>
+📝 Represents the footer or bottom section of a webpage or a section within an article. --> 
+
+<!--- 🔗 example 1: -->
+<footer>
+    <p>2023 Company Name. All rights reserved.</p>
+    <nav>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 Other Semantic Elements ✨(SEMANTIC ELEMENTS) -->
+
+<!-- ----------------- -->
+<!--
+🔸 <figure>
+📝 Represents self-contained content, like images, diagrams, or illustrations, ...
+with an optional caption using <figcaption>.
+
+🔸 <figcaption>
+📝 Represents the caption or description for a figure element. --> 
+
+<!--- 🔗 example 1: -->
+<figure>
+    <img src="/Assets/Sport car.jpg" width="200">
+    <figcaption>Porsche car - 2023</figcaption>
+</figure>
+
+<!-- ----------------- -->
+<!--
+🔸 <article>
+📝 Represents a self-contained, complete piece of content, like a blog post or a news article. --> 
+
+<!--- 🔗 example 1: -->
+<article>
+    <h2>Google Chrome</h2>
+    <p>
+        Google Chrome is a web browser developed by Google, released in 2008.
+        Chrome is the world's most popular web browser today!
+    </p>
+</article>
+
+<!-- ----------------- -->
+<!--
+🔸 <time>
+📝 Represents a specific date, time, or duration. --> 
+
+<!--/ <datetime> attributes -->
+<!--
++ datetime
+Translate the time into a machine-readable format so that browsers can offer to add date ...
+reminders through the user's calendar, and search engines can produce smarter search results. -->
+
+<!--- 🔗 example 1: -->
+<p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+
+<!-- ----------------- -->
+<!--
+🔸 <aside>
+📝 Represents content that is tangentially related to the main content, like sidebars or call-out boxes. --> 
+
+<!--- 🔗 example 1: -->
+<h3>Related Links</h3>
+<ul>
+  <li><a href="#">Link 1</a></li>
+  <li><a href="#">Link 2</a></li>
+  <li><a href="#">Link 3</a></li>
+</ul>
+</aside>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Division Elements ✨(NON-SEMANTIC ELEMENTS) -->
+
+<!-- ----------------- -->
+<!--
+🔸 <div>
+📝 Defines a division or a section in an HTML document.
+📝 This tag is used as a container - which is then styled with CSS or manipulated with JavaScript. 
+📝 <div> is a block element --> 
+
+<!--/ <div> attributes -->
+<!--
++ class
+Specify a class for an HTML element, multiple HTML elements can share the same class. 
+You can have multiple classes in one HTML element by specifying multiple class names in the class attribute.
++ id
+Specify a unique id for an HTML element, Cannot have more than one element with the same id in HTML document.-->
+
+<!--?- 🔗 example 1: -->
+<div class="container_1">
+  <h1>I want to buy a new laptop!</h1>
+</div>
+
+<!--?- 🔗 example 2: -->
+<div id="C1">
+  <h1>Chapter 1</h1>
+</div>
+
+<!-- ----------------- -->
+<!--
+🔸 <span>
+📝 Inline container used to mark up a part of a text, or a part of a document.
+📝 This tag is used as a container - which is then styled with CSS or manipulated with JavaScript. 
+📝 The <span> tag is much like the <div> element, except <span> is an inline element.
+
+<!--/ <span> attributes -->
+<!--
++ class
+Specify a class for an HTML element, multiple HTML elements can share the same class.
+You can have multiple classes in one HTML element by specifying multiple class names in the class attribute. 
++ id
+Specify a unique id for an HTML element, Cannot have more than one element with the same id in HTML document.-->
+
+<!--?- 🔗 example 3: -->
+<p>My mother has <span style="color:blue">blue</span> eyes.</p>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 General HTML Elements -->
+
+<!-- ----------------- -->
+<!--
+🔸 <h1> - <h6>
+📝 <h1> defines the most important heading. <h6> defines the least important heading --> 
+
+<!--- 🔗 example 1: -->
+<h1>This is main heading</h1>
+<h2>This is sub-heading</h2>
+
+<!-- ----------------- -->
+<!-- 
+🔸 <p>
+📝 <p> defines paragraph. -->
+
+<!--- 🔗 example 1: -->
+<p>This is a paragraph</p> 
+<p title="Number 2">This is a paragraph number 2</p> 
+
+<!-- ----------------- -->
+<!-- 
+🔸 <style>
+📝 Add styles to an element, such as color, font, size, and more.
+📝 This is called internal CSS. -->
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 General HTML Attributes -->
+
+<!-- ----------------- -->
+<!--
++ title
+The value of the title attribute will be displayed as a tooltip when you mouse over the element 
++ class
+Specify a class for an HTML element, multiple HTML elements can share the same class. 
+You can have multiple classes in one HTML element by specifying multiple class names in the class attribute.
++ id
+Specify a unique id for an HTML element, Cannot have more than one element with the same id in HTML document. -->
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Hyperlinks Elements -->
+
+<!-- ----------------- -->
+<!-- 
+🔸 <a>
+📝 <a> defines links, the link can go to other website, page, bookmark --> 
+
+<!--- 🔗 example 1: Other website -->
+<a href="https://www.w3schools.com/html/html_basic.asp">Go to w3schools website</a>
+<!--- 🔗 example 2: Other page -->
+<a href="second_page.html" target="_blank">Second page</a>
+<!--- 🔗 example 3: Bookmark to jump another chapter -->
+<a href="#chapter_3">Jump to CHAPTER 3</a>
+
+<!--/ <a> attributes -->
+<!--
++ href 
+specifies the URL of the page the link goes to.
++ target="_blank"
+Opens the document in a new window or tab.
++ target="_self"
+Default. Opens the document in the same window/tab as it was clicked -->
+
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Line Break Elements -->
+
+<!-- ----------------- -->
+<!--
+🔸 <hr>
+📝 <hr> element defines a HTML horizontal rule element used for visual separation of content. --> 
+
+<!--- 🔗 example 1: -->
+<h1>This is h1</h1>
+<hr>
+<p>This is a paragraphs</p>
+
+<!-- ----------------- -->
+<!--
+🔸 <br>
+📝 Use <br> if you want a line break (a new line) without starting a new paragraph. --> 
+
+<!--- 🔗 example 1: -->
+<h1>Seperate this <br> words</h1>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Text Formatting Elements -->
+
+<!-- ----------------- -->
+<!--
+🔸 <b>
+📝 Bold text --> 
+
+<!--- 🔗 example 1: -->
+<p>This text is <b>bold</b></p>
+
+<!-- ----------------- -->
+<!-- 
+🔸 <strong>
+📝 like <b> but it is semantic element -->
+
+<!--- 🔗 example 1: -->
+<strong>This text is important!</strong>
+
+<!-- ----------------- -->
+<!--
+🔸 <i>
+📝 Italic text. --> 
+
+<!--- 🔗 example 1: -->
+<p>This text is <i>italic</i></p>
+
+<!-- ----------------- -->
+<!--
+🔸 <em>
+📝 like <i> but it is semantic element -->
+
+<!--- 🔗 example 1: -->
+<em>This text is emphasized</em>
+
+<!-- ----------------- -->
+<!--
+🔸 <mark>
+📝 efines text that should be marked or highlighted. --> 
+
+<!--- 🔗 example 1: -->
+<mark>This text is highlighted</mark>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Forms Elements -->
+
+<!-- ----------------- -->
+<!--
+🔸 <form>
+📝 Used to create an HTML form for user input. 
+📝 The user input is most often sent to a server for processing. 
+📝 The <form> element is a container for different types of input elements, 
+such as: text fields, checkboxes, radio buttons, submit buttons, etc. --> 
+
+<!--/ <form> attributes -->
+<!--
++ action
+Defines the action to be performed when the form is submitted. 
+Usually, the form data is sent to a file on the server when the user clicks on the submit button. 
++ target (self / blank / top / parent)
+Specifies where to display the response that is received after submitting the form.
++ novalidate
+Is used to turn off the browser's default validation and give us the 
+flexibility to handle form validation on our own terms.
++ method (get / post)
+specifies the HTTP method to be used when submitting the form data.
+The default HTTP method when submitting form data is GET. 
++ autocomplete 
+Specifies whether a form should have autocomplete on or off. -->
+
+<!--- example 1: -->
+
+<form action="/action_page.php">
+    <label>Your tel number:</label>
+    <input type="tel" name="#001">  
+    <input type="submit" value="SUBMIT">
+</form>
+
+<!-- ----------------- -->
+<!--
+🔸 <label>
+📝 Used to provide a label or description for an input field. -->
+
+<!--/ <label> attributes -->
+<!--
++ for
+By setting the for attribute of the <label> element to the id attribute of the corresponding input field, 
+clicking on the label will focus or activate the associated input field. 
+This enhances usability and accessibility for user. -->
+
+<!--- example 1: -->
+<form action="/action_page.php">
+    <label for="first_email">Your email:</label>
+    <input type="email" name="" id="first_email">  
+    <input type="submit" value="SUBMIT">
+</form>
+
+<!-- ----------------- -->
+<!--
+🔸 <input>
+📝 Create interactive form controls that allow users to input data or make selections.
+📝 <input> element can be displayed in many ways, depending on the input type attribute. -->
+
+<!--/ <input type> attributes -->
+<!--
++ type="text"
+Displays a single-line text input field.
++ type="radio"
+Displays a radio button (for selecting one of many choices).
++ type="checkbox"
+Displays a checkbox (for selecting zero or more of many choices).
++ type="submit"
+Displays a submit button (for submitting the form).
++ type="button"
+Displays a clickable button.
++ type="submit"
+Displays a submit button (for submitting the form).
+This method is a simpler and more straightforward way to create a button specifically for form submission
+than using <button> element.
++ type="reset"
+Defines a reset button that will reset all form values to their default values.
++ type="password"
+Defines a password field.
++ Input type="number"
+Defines a numeric input field.
++ Input type="date"
+Used for input fields that should contain a date. 
+Depending on browser support, a date picker can show up in the input field. 
++ Input type="file"
+Defines a file-select field and a "Browse" button for file uploads. -->
+
+<!--/ <input> other attributes -->
+<!-- 
++ value
+Specifies an initial value for an input field-. 
+Example: <input type="text" value="John">
++ disabled
+Specifies that an input field should be disabled. A disabled input field is unusable and un-clickable. 
+The value of a disabled input field will not be sent when submitting the for-m.
+Example: <input type="text" value="John" disabled>
++ maxlength
+Specifies the maximum number of characters allowed in an input field.  
+This attribute does not provide any feedback, if you want to alert the user, you must write JavaScript cod-e.
+Example:  <input type="password" maxlength="6">
++ min / max
+Specifies the minimum and maximum values for an input field.
+The attributes work with the following input types: number, range, date, datetime-local, month, time and wee-k.
+Example: <input type="number" id="quantity" name="quantity" min="1" max="5">
++ multiple
+Specifies that the user is allowed to enter more than one value in an input field. 
+The multiple attributes work with the following input types: email, and fil-e.
+Example: <input type="file" id="files" name="files" multiple>
++ placeholder
+Specifies a sample value or a short description of the expected format. 
+The placeholder attribute works with the following input types: text, search, url, tel, email, and passwor-d.
+Example: <input type="tel" id="phone" name="phone" placeholder="123-45-678">
++ required
+Specifies that an input field must be filled out before submitting the form. 
+The required attribute works with the following input types: 
+text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.
++ autofocus
+Specifies that an input field should automatically get focus when the page loads.
++ autocomplete
+Specifies whether a form or an input field should have autocomplete on or off. 
+Autocomplete allows the browser to predict the value. When a user starts to type in a field, 
+the browser should display options to fill in the field, based on earlier typed values. 
+The autocomplete attribute works with <form> and the following <input> types: 
+text, search, url, tel, email, password, datepickers, range, and colo-r.
+Example: <input type="password" autocomplete="on">
++ list
+Serves as a connection between an <input> element and a <datalist> element in HTML. 
+This association enables the browser to display a dropdown list of suggested options when the 
+user interacts with the input fiel-d.
+Example: <input list="browsers"> 
++ name
+Important when submitting a form because it is used to identify the input field and its corresponding 
+value when the form is submitted to a server. -->
+
+<!--?- 🔗 example 1:  -->
+
+<form action="">
+    <label for="quantity">What is your age?</label>
+    <input type="number" id="quantity" name="quantity" min="18" max="99">
+    <input type="submit" value="SUBMIT">
+</form>
+
+<!-- ----------------- -->
+<!--
+🔸 <datalist>
+📝 Provide a pre-defined set of options that can be suggested to the user when they interact ...
+with the associated <input> element.
+📝 Users will see a drop-down list of pre-defined options as they input data.
+📝 The <datalist> element's id attribute must be equal to the <input> element's list attribute ...
+(this binds them together). -->
+
+<!--/ <datalist> attributes -->
+<!-- 
++ id
+Serves as a unique identifier for that particular element. Establishes the connection between 
+the <input> field and the options defined within the <datalist> element. -->
+
+<!--
+🔸 <option>
+📝 Define individual options within a <datalist> element in HTML.
+
+<!--/ <datalist> attributes -->
+<!-- 
++ value
+Specifies the value associated with each <option> elements -->
+
+<!--?- 🔗 example 1:  -->
+
+<label for="first_question">Choose your browser from the list:</label>
+<input list="browsers" name="browser" id="first_question">
+
+<datalist id="browsers">
+  <option value="Edge">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Image Elements  -->
+
+<!-- ----------------- -->
+<!--
+🔸 <img>
+📝 Embed an image in a web page.
+📝 The <img> tag is an empty element. -->
+
+<!--/ <img> attributes -->
+<!--
++ src 
+Specifies the path to the image.
++ alt 
+Specifies an alternate text for the image.
++ width / height
+Define the width and height of the image in pixels. 
++ loading (lazy)
+Deferring the loading of assets till it reaches a certain distance from the viewport. -->
+
+<!--?- 🔗 example 1: -->
+<img src="/Assets/Profile Picture 5.jpg" alt="Profile pictures" width="120">
+
+<!-- ----------------- -->
+<!--
+🔸 <picture>
+📝 Allows you to display different pictures for different devices or screen sizes.
+📝 Gives web developers more flexibility in specifying image resources. 
+📝 The <picture> element contains one or more <source> elements -->
+
+<!--
+🔸 <source>
+📝 Source of the image. -->
+
+<!--/ <source> attributes -->
+<!--
++ media 
+When the image want to show up, accepts any valid media query that would normally be defined in a CSS
++ scrset
+Specifies the path to the image. -->
+
+<!--?- 🔗 example 1: -->
+<picture>
+    <source media="(max-width: 650px)" srcset="/Assets/Picture_element/wallpaper 3.jpg">
+    <source media="(max-width: 465px)" srcset="/Assets/Picture_element/wallpaper 4.jpg">
+    <img src="/Assets/Picture_element/wallpaper 2.jpg " width="300">
+</picture>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Video Elements -->
+
+<!-- ----------------- -->
+<!--
+🔸 <video>
+📝 The HTML <video> element is used to show a video on a web page. 
+📝 The text between the <video> and </video> tags will only be displayed in browsers ...
+that do not support the <video> element. -->
+
+<!--/ <img> attributes -->
+<!--
++ src 
+Specifies the path to the video.
++ controls 
+Adds video controls, like play, pause, and volume.
++ autoplay
+To start a video automatically.
++ muted
+To mute video from the start.
++ loop
+To loop the video.
+
+<!--?- 🔗 example 1: -->
+<video src="/Assets/ELDEN RING - Official Gameplay Reveal.mp4" controls width="300"></video>
+
+<!--?- 🔗 example 2: -->
+<video src="/Assets/2023 ROG Zephyrus G16 - Amp Your Game. _ ROG.mp4" autoplay muted loop width="300"></video>
+
+<!-- ----------------- -->
+<!--
+🔸 <source>
+📝 It allows you to provide alternative sources for the video content, 
+ensuring compatibility with different browsers and devices. 
+📝 You should use the <source> element in the following situations: 
+1. Multiple video formats: Different browsers support different video formats.
+2. Fallback options: Sometimes a browser may not support any of the specified video formats. -->
+
+<!--/ <source> attributes -->
+<!--
++ media 
+When the image want to show up, accepts any valid media query that would normally be defined in a CSS.
++ scr
+Specifies the path to the image.
++ type
+Specifies the MIME-type of the resource. -->
+
+<!--?- 🔗 example 1: -->
+<p>Video is not available</p>
+<video controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    <source src="video.ogg" type="video/ogg">
+</video>
+
+<!-- ----------------- -->
+<!--
+🔸 <track>
+📝 Specifies subtitle for <video> elements.
+📝 Tracks are formatted in WebVTT format (.vtt files).
+
+<!--/ <source> attributes -->
+<!--
++ scr
+Specifies the path to the image.
++ kind
+Specifies the kind of text track.
++ srclang
+Specifies the language of the track text data (required if kind="subtitles")
++ label
+Specifies the title of the text track
+
+<!--?- 🔗 example 1: -->
+<p>Video is not available</p>
+<video width="300" controls>
+    <source src="forrest_gump.mp4" type="video/mp4">
+    <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+</video>
+
+<!-- ----------------- -->
+<!--
+🔸 <iframe>
+📝 Converting videos to different formats can be difficult and time-consuming.
+📝 An easier solution is to let YouTube play the videos in your web page.
+📝 The <iframe> element is an HTML tag that allows you to embed content from ...
+another source within the current web page.
+
+
+<!--/ <source> attributes -->
+<!--
++ scr
+Specifies the path to vide URL. 
+You need to use the proper URL format for embedding YouTube videos:
+https://www.youtube.com/embed/ (VIDEO_ID)  -->
+
+<!--/ Youtube URL Parameters -->
+<!-- 📝 Put "?" for the first parameter and Put "&" for the next parameter -->
+<!--
++ autoplay=1
+video start playing automatically.
++ mute=1
+muted the video.
++ loop=1
+let your video loop forever.
++ controls=0
+Player controls does not display.
+
+<!--?- 🔗 example 1: -->
+<iframe src="https://www.youtube.com/embed/RL6tLbeMt2A?autoplay=1&mute=1&controls=0"></iframe>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Audio Elements -->
+
+<!-- ----------------- -->
+<!--
+🔸 <audio>
+📝 The HTML <audio> element is used to play an audio file on a web page. 
+📝 The text between the <audio> and </audio> tags will only be displayed in browsers ...
+that do not support the <audio> element. -->
+
+<!--/ <img> attributes -->
+<!--
++ src 
+Specifies the path to the audio.
++ controls 
+Adds audio controls, like play, pause, and volume.
++ autoplay
+To start a video automatically.
++ loop
+To loop the audio.
+
+<!--?- 🔗 example 1: -->
+<audio src="/Assets/AMIR JAHARI - HASRAT OST.mp3" controls>Hasrat.mp3</audio>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Lists Elements -->
+
+<!-- ----------------- -->
+<!--
+🔸 <ul>
+📝 Unordered list.
+📝 The list items will be marked with bullets (small black circles) by default. --> 
+
+<!--
+🔸 <li>
+📝 	Defines a list item. -->
+
+<!--?- 🔗 example 1: -->
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<!-- ----------------- -->
+<!--
+🔸 <ol>
+📝 Ordered list.
+📝 he list items will be marked with numbers by default. -->
+
+<!--
+🔸 <li>
+📝 	Defines a list item. -->
+
+<!--?- 🔗 example 2: -->
+<ol>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Tables Elements -->
+
+<!-- ----------------- -->
+<!--
+🔸 <table>
+📝 Defines a table --> 
+
+<!-- ----------------- -->
+<!--
+🔸 <tr>
+📝 Defines a row in a table. -->
+
+<!--
+🔸 <th>
+📝 Defines a header cell in a table -->
+
+<!--
+🔸 <td>
+📝 Defines a cell in a table -->
+
+<!-- ----------------- -->
+
+<!--?- 🔗 example 1: -->
+
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+</style>
+
+<table>
+    <tr>
+      <th>Company</th>
+      <th>Contact</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <td>Centro comercial</td>
+      <td>Francisco Chang</td>
+      <td>Mexico</td>
+    </tr>
+  </table>
+
+<!--* -------------------------------------------------------------------------- -->
+<!-- 🧡 HTML Quotation and Citation Elements ✨(SEMANTIC ELEMENTS) -->
+
+<!-- ----------------- -->
+<!--
+🔸 <abbr>
+📝 defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM". 
+📝 Abbreviations can give useful information to browsers, translation systems and search-engines.--> 
+
+<!--- 🔗 example 1: -->
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+<!-- ----------------- -->
+<!--
+🔸 <address>
+📝 Defines the contact information for the author/owner of a document or an article. 
+📝 The contact information can be an email address, URL, physical address, phone number, etc.--> 
+
+
+<!--- 🔗 example 1: -->
+<address>
+Written by John Doe.<br>
+Visit us at:<b-r>
+Example.com<br>
+Box 564, Disneyland<br>
+USA
+</address>
+
+<!-- ----------------- -->
+<!--
+🔸 <cite>
+📝 defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, etc.) -->
+
+<!--- 🔗 example 1: -->
+<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+
+<!--* -------------------------------------------------------------------------- -->
+</body>
+</html>

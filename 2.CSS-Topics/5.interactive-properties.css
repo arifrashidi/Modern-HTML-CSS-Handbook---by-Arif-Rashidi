@@ -1,0 +1,211 @@
+
+/** -------------------------------------------------------------------------- */
+/* 📁 CHAPTER 6: Interactive Properties */
+/** -------------------------------------------------------------------------- */
+
+/* • 🧡: Main topic  */
+/* • 📝: Notes  */
+/* • 🔸: Subtopics  */
+/* • 🔗: Sub-subtopics   */
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Transform 
+📝 Allows you to apply various transformations to an element in a 2D or 3D space. */
+
+/* ----------------- */
+/* 
+🔸 transform
+📝 Allows you to apply various transformations to an element.
+📝 This property enabling you to modify element appearance and position ...
+without changing the layout or affecting other elements on the page. */
+
+/*/ transform properties values */
+/* 
++ translate(X-AXIS, Y-AXIS)
+Moves an element from its current position (according to the parameters given 
+for the X-axis and the Y-axis).
++ rotate(DEGREES)
+Rotates an element clockwise or counter-clockwise according to a given degree.
++ scale(NUMBER)
+Increases or decreases the size of an element according to a given value.
+The value can be a single value to scale uniformly or separate values 
+for horizontal and vertical scaling. 
++ skew(X-AXIS_DEG, Y-AXIS_DEG)
+Skews an element along the X and Y-axis by the given degrees angles */
+
+/*- 🔗 example 1: */
+.box {
+    transform: translate(20px, -30px);
+}
+
+/*- 🔗 example 2: */
+.box {
+    transform: rotate(20deg);
+}
+
+/*- 🔗 example 3: */
+.box {
+    transform: scale(2);
+}
+
+/*- 🔗 example 4: */
+.box {
+    transform: skew(20deg, 10deg);
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Transitions 
+
+/* ----------------- */
+/* 
+🔸 transition
+📝 Allows you to add smooth transitions between two states. 
+📝 Transitions are triggered by an event, such as a hover, click, or adding/removing a class.
+📝 Transitions cannot be triggered automatically on page load. 
+📝 Transition is more simple and straightforward than animation. */
+
+/*syntax: 🔗 transition
+.container {
+    transition: property, duration, timing-function, delay;
+}
+*/
+
+/*/ transition properties values */
+/* 
++ PROPERTY
+Specifies the CSS property or properties that you want to apply the transition effect to. 
+You can specify multiple properties by separating them with commas.
+Example: All
+
++ DURATION
+Specifies the duration of the transition effect. 
+It can be defined in milliseconds(ms). 
+Example: 300ms
+
++ TIMING FUNCTION (optional)
+Specifies the timing function that controls the acceleration and deceleration of the transition.
+Among the commonly used timing functions, the one that developers often prefer to use is "ease". 
+
+• ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+• linear - specifies a transition effect with the same speed from start to end
+• ease-in - specifies a transition effect with a slow start
+• ease-out - specifies a transition effect with a slow end
+• ease-in-out - specifies a transition effect with a slow start and end
+• cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function
+
++ delay (optional)
+Specifies a delay before the transition effect starts.
+It can be defined in milliseconds(ms). 
+Example: 200ms
+*/
+
+/*- 🔗 example 1: */
+button {
+    background-color: cornflowerblue;
+    transform: all 300ms ease 200ms;
+}
+button:hover {
+    background-color: blue;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Animations 
+📝 CSS allows animation of HTML elements without using JavaScript.
+📝 Animations can create more complex and dynamic visual effects than transition, ...
+They allow for the sequential rendering of multiple keyframes.
+📝 Animation can be triggered automatically on page load.
+*/
+
+/* ----------------- */
+/* 
+🔸 animation
+📝 This property is a shorthand property that combines several individual ...
+ animation-related properties into a single declaration.  */
+
+/*syntax: 🔗 animation
+.container {
+    animation: animation-name, animation-duration, animation-timing-function,
+    animation-delay, animation-iteration-count, animation-direction, 
+    animation-fill-mode, animation-play-state;
+}
+*/
+
+/*/ animation properties values */
+/* 
++ ANIMATION NAME
+Specifies the name of the @keyframes animation.
+
++ ANIMATION DURATION
+Specifies how long time an animation should take to complete one cycle.
+It can be defined in milliseconds(ms). 
+Example: 650ms.
+
++ ANIMATION TIMING DURATION (optional)
+Specifies the timing function that controls the acceleration and deceleration of the animation.
+
+• ease - specifies a transition effect with a slow start, then fast, then end slowly. (this is default)
+• linear - specifies a transition effect with the same speed from start to end.
+• ease-in - specifies a transition effect with a slow start.
+• ease-out - specifies a transition effect with a slow end.
+• ease-in-out - specifies a transition effect with a slow start and end.
+
++ ANIMATION ITERATION COUNT (optional)
+Sets the number of times the animation should repeat. 
+Default value is 1 (no repeat).
+
+• The value can be an integer (1, 2, 3, ...).
+• The value can be a keyword (infinite).
+
++ ANIMATION DIRECTION (optional)
+Determines the direction of the animation on each iteration .
+
+• normal - The animation is played as normal that is forwards. (this is default)
+• reverse - The animation is played in reverse direction that is backwards.
+• alternate - The animation is played forwards first, then backwards.
+• alternate-reverse - The animation is played backwards first, then forwards.
+
++ ANIMATION FILL MODE (optional)
+Specifies how the animation styles should be applied before and after the animation.
+Thee most commonly used animation-fill-mode value by developers is "forwards".
+
+• none - Animation will not apply any styles to the element before or after it is executing. (this is default)
+• forwards - The element retains the styles of the last keyframe after the animation completes.
+• backwards - The element applies the styles of the first keyframe before the animation starts. 
+• both - The animation will follow the rules for both forwards and backwards.
+
++ ANIMATION PLAY STATE (optional)
+Controls whether the animation is running or paused. 
+The value is "running" or "paused" only.
+*/
+
+/*- 🔗 example 1: */
+.container {
+    animation: fade_up 650ms ease infinite reverse forwards paused;
+}
+
+/* ----------------- */
+/* 
+🔸 @keyframes
+📝 Used to define the behavior and animation steps for CSS animations. 
+📝 It allows you to specify how an element's style should change at various ...
+points during the animation timeline.  */
+
+/*syntax: 🔗 @keyframes
+@keyframes ANIMATION_NAME {
+    PERCENTAGES {
+        CSS styles for the keyframes.
+    }
+}
+*/
+
+/*- 🔗 example 1: */
+@keyframes fade_up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

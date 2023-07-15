@@ -1,0 +1,441 @@
+
+/** -------------------------------------------------------------------------- */
+/* 📁 CHAPTER 5: Display & Layout Properties */
+/** -------------------------------------------------------------------------- */
+
+/* • 🧡: Main topic  */
+/* • 📝: Notes  */
+/* • 🔸: Subtopics  */
+/* • 🔗: Sub-subtopics   */
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Display 
+
+/* ----------------- */
+/* 
+🔸 display
+📝 The display property can be used to alter the default display behavior of elements ...
+and achieve specific layout requirements. 
+📝 It is a powerful tool for controlling the positioning, flow, and structure of ...
+elements on a webpage. */
+
+/*/ display property values on how element been displayed */
+/* 
++ none
+The element is not displayed at all.
+It is completely removed from the document flow and does not take up any space.
++ block
+The element generates a block-level box. 
+It starts on a new line and takes up the full width available by default.
++ inline
+The element generates an inline-level box. 
+It does not start on a new line and only occupies the necessary width and height to contain its content.
++ inline-block
+The element generates an inline-level box, 
+but have the ability to defined width, height, margins, and padding, like block-level elements.
+It does not start on a new line and respects dimensions. */
+
+/*/ display property values for controlling layout. */
+/* 
++ flex
+The element becomes a flex container, and its direct children become flex items.
+It allows you to use flexbox properties to create flexible layouts.
++ grid
+The element becomes a grid container, and its direct children become grid items. 
+It enables you to create grid-based layouts using grid properties. */
+
+/*- 🔗 example 1: */
+.container {
+    display: none;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Visibility 
+
+/* ----------------- */
+/* 
+🔸 opacity
+📝 Specifies the opacity/transparency of an element.
+📝 When using the opacity property to add transparency to the background of an element, ...
+all of its child elements inherit the same transparency. 
+📝 The opacity property can take a value from 0.0 - 1.0. The lower the value, the more transparent: */
+
+/*- 🔗 example 1: */
+.container {
+    opacity: 0.5;
+}
+
+/* ----------------- */
+/* 
+🔸 visibility: hidden
+📝 Used to hide an element from view while still reserving its space in the layout. 
+📝 The "visibility: hidden" is just like "opacity: 0".  */
+
+
+/*- 🔗 example 1: */
+.container {
+    visibility: hidden;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Position 
+📝  Used to control the positioning of an element within its parent container or the document.
+*/
+
+/* ----------------- */
+/* 
+🔸 position: static;
+📝 HTML elements are positioned static by default.
+📝 The element follows the normal document flow.
+📝 It is not affected by the top, bottom, left, right, or z-index properties. 
+*/
+
+/* ----------------- */
+/* 
+🔸 position: relative;
+📝 The element is positioned relative to its normal position in the document flow.
+📝  It can be shifted using the top, bottom, left, and right properties.
+📝 Other elements are not affected by the shifted element.
+*/
+
+/*- 🔗 example 1: */
+.container {
+    position: relative;
+    left: 30px;
+}
+
+/* ----------------- */
+/* 
+🔸 position: absolute;
+📝 The element is positioned relative to its closest positioned ancestor 
+(an ancestor with a position value other than static). 
+📝 If no positioned ancestor is found, the element is positioned relative to the document body. 
+📝 It can be shifted using the top, bottom, left, and right properties. 
+📝 The element is completely removed from the document flow, and other elements may overlap it.
+*/
+
+/*- 🔗 example 1: */
+.parent_container {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+} 
+.container {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+ }
+
+ /* ----------------- */
+/* 
+🔸 position: fixed;
+📝 The element is positioned relative to the browser window or the viewport. 
+📝 It remains fixed in its position even when the page is scrolled. 
+📝 It can be shifted using the top, bottom, left, and right properties. 
+📝 Other elements do not affect its position.
+*/
+
+/*- 🔗 example 1: */
+.container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+
+ /* ----------------- */
+/* 
+🔸 position: sticky;
+📝 The element is positioned based on the user's scroll position. 
+📝 It is similar to relative positioning until the user scrolls to a specified threshold, ...
+at which point it becomes fixed positioned. 
+📝 sticky feature can activate by set its top or bottom properties.
+📝 It is commonly used for sticky headers or sidebars.
+*/
+
+/*- 🔗 example 1: */
+.container {
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Z-index 
+
+/* ----------------- */
+/* 
+🔸 z-index
+📝 Specifies the stack order of an element ...
+(which element should be placed in front of, or behind, the others).
+📝 An element can have a positive or negative stack order.
+📝 The z-index property only applies to positioned elements, which means an element ...
+must have a position value of relative, absolute, or fixed for z-index to have an effect. */
+
+/*/ z-index property values */
+/* 
++ INTEGER VALUES
+Higher integer value indicates a higher position in the stacking order.  */
+
+/*- 🔗 example 1: */
+.container {
+    position: relative;
+    z-index: 2;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Box Sizing 
+📝 By default, the width and height of an element is calculated like this:
+• width + padding + border = actual width of an element.
+• height + padding + border = actual height of an element.
+📝 This means: When you set the width/height of an element, the element often appears bigger than you have set.
+(because the element's border and padding are added to the element's specified width/height).
+*/
+
+/* ----------------- */
+/* 
+🔸 box-sizing: border-box 
+📝 Allows us to include the padding and border in an element's total width and height.
+📝 By default, the box-sizing property is set to content-box value.
+📝 This property simplifies calculations, as you don't need to adjust for ...
+the additional width of borders and padding.
+📝 It allows for a more predictable and consistent layout, as the total dimensions ...
+of elements remain constant regardless of the padding and border sizes.
+📝 Applying this to all elements is safe and wise:
+
+/*- 🔗 example 1: */
+* {
+    box-sizing: border-box;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Overflow 
+
+/* ----------------- */
+/* 
+🔸 overflow 
+📝  Used to control how content that exceeds the size of an element's box is displayed within that box. */
+
+/*/ overflow properties values */
+/* 
++ visible (default)
+The content is not clipped, and it may extend beyond the dimensions of the element's box.
++ hidden
+Any content that exceeds the dimensions of the element's box is clipped and not displayed.
++ scroll
+Setting the value to scroll, the overflow is clipped and a scrollbar is added to scroll inside the box. 
+Note that this will add a scrollbar both horizontally and vertically ( even if only one axis is needed.)
++ auto
+The auto value is similar to scroll, but it adds scrollbars only when necessary: */
+
+/*- 🔗 example 1: */
+.container {
+    overflow: auto;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Flexbox 
+📝 CSS Flexbox (Flexible Box Layout) is a layout module that provides a flexible way to arrange ...
+and align elements within a container. 
+📝 It is designed to make it easier to create responsive and dynamic layouts for web pages.
+
+/* ----------------- */
+/* 
+🔸 display: flex
+📝 Used to create a flex container and enable the Flexbox layout for its child elements.
+📝 Child elements within a flex container are referred to as flex items.*/
+
+/*- 🔗 example 1: */
+.container {
+    display: flex;
+}
+
+/* ----------------- */
+/* 
+🔸 flex-direction
+📝 After created flex container, flex-direction is used to ...
+defines in which direction the container wants to stack the flex items. */
+
+/*/ flex-direction properties values */
+/* 
++ row (default)
+Stacks the flex items horizontally (from left to right).
++ row-reverse
+Stacks the flex items horizontally (but from right to left).
++ column
+Stacks the flex items vertically (from top to bottom).
++ column-reverse
+Stacks the flex items vertically (but from bottom to top). */
+
+/*- 🔗 example 1: */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------------- */
+/* 
+🔸 gap
+📝 Used to set the spacing between flex items within a flex container with specific integer value.
+📝 It provides a convenient way to add equal spacing between the flex items without ...
+the need for additional margin or padding styles. */
+
+/*/ gap property values */
+/* 
++ length
+specifies a gap in px, em, rem.
+*/
+
+/*- 🔗 example 1: */
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+/* ----------------- */
+/* 
+🔸 flex-wrap
+📝 Specifies whether the flex items should wrap or not.
+📝 By default, flex items are laid out in a single line.  */
+
+/*/ flex-wrap properties values */
+/* 
++ wrap
+Specifies that the flex items will wrap if necessary.
++ nowrap (default)
+Specifies that the flex items will not wrap. */
+
+/*- 🔗 example 1: */
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* ----------------- */
+/* 
+🔸 justify-content
+📝 Used to align flex items along the main axis. 
+📝 It allows you to control the distribution of space between and around the flex items. */
+
+/*/ justify-content properties values */
+/* 
++ flex-start (default)
+Aligns the flex items at the beginning of the container 
++ center
+Aligns the flex items at the center of the container.
++ flex-end
+Aligns the flex items at the end of the container 
++ space-between
+It distributes the flex items evenly along the main axis, 
+with the first item aligned to the start edge and the last item aligned to the end edge. 
+The remaining space is divided equally between the items.
++ space-around
+It distributes the flex items evenly along the main axis, 
+with equal space before the first item and after the last item. 
+The remaining space is divided equally between the items.
+*/
+
+/*- 🔗 example 1: */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ----------------- */
+/* 
+🔸 align-items
+📝 Used to control the alignment of flex items along the cross axis of a flex container. 
+📝 It allows you to adjust the vertical positioning of flex items within the container. */
+
+/*/ align-items properties values */
+/* 
++ stretch (default)
+Stretches the flex items to fill the container.
++ flex-start
+Aligns the flex items at the top of the container.
++ center
+Aligns the flex items in the middle of the container.
++ flex-end
+Aligns the flex items at the bottom of the container. */
+
+/*- 🔗 example 1: */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ----------------- */
+/* 
+🔸 align-content
+📝 Used to align the flex lines along the cross axis of a flex container when there is extra space available. 
+📝 It applies to flex containers with multiple lines of flex items created through wrapping. */
+
+/*/ align-content properties values */
+/* 
++ stretch (default)
+Stretches the flex lines to take up the remaining space.
++ flex-start
+Displays the flex lines at the start of the container.
++ center
+Displays the flex lines in the middle of the container.
++ flex-end
+Displays the flex lines at the end of the container.
++ space-between
+Displays the flex lines with equal space between them.
++ space-around
+Displays the flex lines with space before, between, and after them. */
+
+/*- 🔗 example 1: */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+/** -------------------------------------------------------------------------- */
+/* 🧡 CSS Media Query 
+📝 Media queries are primarily used to create responsive web designs that can adapt to ...
+different screen sizes and devices.
+
+/* ----------------- */
+/* 
+🔸 @media()
+📝 Used to define a media query. It indicates that the following block of CSS rules ...
+should be applied only when certain conditions are met. These conditions are typically ...
+based on the viewport size.
+📝 Expression for @media usualy using max-width.
+📝 the most commonly recommended unit to use in media query is "em", ...
+it ensures that your layout and styles will scale appropriately based on the user's preferred font size. 
+*/
+
+/*syntax: 🔗 @media()
+@media(EXPRESSION) {
+    CSS RULES TO BE APPLIED WHEN THE CONDITION IS MET
+*/
+
+/*- 🔗 example 1: */
+@media (max-width: 40em) {
+
+ h1 {
+ font-size: 3.8rem;
+ }
+ h2 {
+ font-size: 3.4rem;
+ }
+ p {
+ font-size: 1.4rem;
+ }
+ 
+}
